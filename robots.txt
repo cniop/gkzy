@@ -1,5 +1,0 @@
-User-agent: * 
-Disallow: /
-Allow: /mbti/index.html
-Allow: /hld/index.html
-Allow: /index.html
