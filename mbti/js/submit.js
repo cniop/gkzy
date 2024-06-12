@@ -107,7 +107,7 @@ new Vue({
             this.$refs.sjk.readOnly = true
         },
         tskclose() {
-            window.location.href = '/'
+            window.location.href = './../'
         }
     },
     mounted() {
@@ -116,7 +116,7 @@ new Vue({
 
         if (yidaStr.length!=86 || idx != 86) {
             //如果没有答完直接跳转到首页
-            window.location.href = '/'
+            window.location.href = './../'
         }
 
         function getCookie(key) {
