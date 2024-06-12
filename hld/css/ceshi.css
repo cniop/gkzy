@@ -1,0 +1,395 @@
+
+  .list-enter-active  {
+    transition: all 0.5s;
+    transition-delay: 0.2s;
+  }
+  .list-leave-active{
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .list2-enter-active  {
+    /* transition: all 0.5s; */
+    /* transition-delay: 0.2s; */
+  }
+  .list2-leave-active{
+    /* transition: all 0.5s; */
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .list2-enter {
+    opacity: 0;
+    /* transform: translateX(100%); */
+  }
+  .list2-leave-to{
+    opacity: 0;
+    /* transform: translateX(-100%); */
+  }
+
+  .list-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  .list-leave-to{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  .my-sm-bg{
+    background: url('../img/sm-bg.png');background-size: 100% 100%;
+  }
+
+  @media (max-width:500px) {
+    .my-sm-bg{
+      background: url('../img/mb-sm-bg.png');background-size: 100% 100%;
+    }
+  }
+
+  @media (max-width:500px) {
+    .list-enter-active  {
+      transition: all 0.2s;
+      transition-delay: 0.2s;
+    }
+    .list-leave-active{
+      transition: all 0.2s;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .list2-enter-active  {
+      transition: all 0.2s;
+      transition-delay: 0.2s;
+    }
+    .list2-leave-active{
+      transition: all 0.2s;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+
+
+  .bgc {
+    border: 1px #4097F4 solid;
+    color: aliceblue;
+    background-color: #4097F4;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .bgc3 {
+    color: aliceblue;
+    background-color: #4097F4;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .bgc4{
+    color: aliceblue;
+    background-color: #4097F4;
+  }
+
+  .bgc2 {
+    border: 1px #4097F4 solid;
+  }
+
+  .colbg1{
+    border: 2px solid white;
+  }
+
+  .colbg2{
+    background:  white;
+  }
+
+  .class2{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .class3{
+    width: 34px;
+  }
+
+  .class5{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .class4{
+    width: 54px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .class55{
+    margin-bottom: 2rem;
+  }
+
+  .class66{
+    margin-bottom: 2rem;
+  }
+
+  .class6{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .class7{
+    width: 11.25rem;
+  }
+
+  .class9{
+    width: 10rem;
+  }
+
+  .c32o1{
+    top: -21px;
+    left: -25px;
+  }
+
+  .c32o2{
+    top: -21px;
+    left: 55px;
+  }
+
+  .c32o3{
+    top: -21px;
+    left: 135px;
+  }
+
+  .c32o4{
+    top: 60px;
+    left: 165px;
+  }
+  
+  .c32o5{
+    top: 140px;
+    left: 100px;
+  }
+
+  .c32o6{
+    top: 220px;
+    left: 30px;
+  }
+
+  .c32o7{
+    bottom: -23px;
+    left: 55px;
+  }
+
+  .c32o8{
+    bottom: -23px;
+    left: 135px;
+  }
+
+  .c32o9{
+    bottom: -23px;
+    left: 215px;
+  }
+
+  .totwo{
+    width: 46%;
+    margin: 10px 0px;
+  }
+
+  .twobox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .class10 {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .class11 {
+    width: 3rem !important;
+    height: 80px;
+    margin: 0.5rem 1rem;
+  }
+
+  .class12{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 9rem !important;
+  }
+
+  .class13{
+    width: 8rem;
+  }
+
+  .shuzi{
+    font-size: 1.875rem;
+  }
+
+  .class98{
+    height: 18.125rem;
+  }
+
+  .class97{
+    width: 41.25rem;
+  }
+
+  .class96{
+    width: 6.25rem;
+  }
+
+  .class94{
+    width: 6.75rem;
+  }
+
+  .class89{
+    margin-top: 12rem;
+  }
+
+  .mygrid4{
+    width: 80% !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+ .colorimgbox{
+  width: 420px !important;
+  }
+
+  .textleft{
+    text-align: left !important;
+  }
+
+  .bgc5{
+    color: #fff;
+  }
+
+  @media (min-width:500px) and (max-width:980px){
+
+    .mdsize{
+      font-size: 1.125rem;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+@media (max-width:500px){
+  .colorimgbox{
+    width: 320px !important;
+  }
+  .mygrid4{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .class89{
+    margin-top: 7rem;
+  }
+  .class90{
+    height: 9rem !important;
+  }
+  .class91{
+    margin: 0.8rem !important;
+  }
+  .class92{
+    margin-bottom: 0px !important;
+  }
+  .class93{
+    margin: 0.5rem !important;
+  }
+  .class94{
+    width: 5.625rem;
+  }
+  .h600{
+    height: 44rem;
+  }
+  .class95{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .class96{
+    width: 4.125rem;
+  }
+  .class97{
+    width: 100%;
+  }
+  .class98{
+    height: 14.375rem;
+  }
+
+  .class3{
+    width: 12px;
+  }
+
+  .class4{
+    width: 32px;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+
+  .class66:nth-of-type(3){
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .class1212:nth-of-type(3){
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .class77{
+    margin-left: 1.4rem;
+    margin-right: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .class77:nth-of-type(1){
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  .class77:nth-of-type(2){
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+  .class8{
+    width: 4rem;
+  }
+
+  .class10 {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+
+  .class12{
+    width: 6rem !important;
+  }
+
+  .class13{
+    width: 5rem;
+  }
+
+  .bgc3{
+    background-color: #4097F4;
+    color: #fff;
+  }
+
+  .bgc4{
+    background-color: #fff;
+    color: #4097F4;
+  }
+
+  
+}
+
+
+@media (max-width: 500px){
+
+  body {
+      padding-bottom: 0px !important;
+  }
+
+}
+

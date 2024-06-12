@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="applicable-device" content="pc,mobile">
+	<meta http-equiv="Cache-Control" content="no-transform " />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <title>霍兰德职业兴趣测试题-高考专业版</title>
+
+
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/ceshi.css">
+  <link rel="stylesheet" href="./css/change.css">
+  <script src="/js/nocopy.js"></script> 
+</head>
+
+<body class='sm:bg-f5f'>
+  <div id="app" v-cloak>
+    <div ref="zhezhao" class="hidden cursor-pointer z-20 w-full h-full fixed top-0 left-0 "
+            style="background: rgba(0,0,0,0.1);" @click="myclose()" @touchmove.prevent></div>
+
+        <div class="w-full my-shadow ">
+            <div class="bg-white px-3 py-3 sm:pt-8 sm:pb-8  relative  h-12 sm:h-28 flex justify-between items-center">
+                <div class=" container mx-auto flex justify-between items-center">
+                    <div class=" flex items-center">
+                        <div class="z-20">
+                            <span class="relative">
+                                <img src="./img/m-cs-bz2.png" alt="" @click="iftanchang(2)" title="声明"
+                                    class="h-22px sm:h-9 inline-block mr-4 cursor-pointer">
+                                <div class="w-72 sm:w-96 md:w-830px absolute  sm:-right-68px z-10 px-7 my-sm-bg-2
+                                md:px-20 pt-11 pb-5 sm:pb-11 text-555 sm:text-lg text-sm  sm:my-sm-bg-1 top-3 sm:top-9 -left-5 sm:myleft hidden"
+                                     id="pcsm" 
+                                    ref="pcsm">
+                                    <p class="text-22 sm:text-4xl text-center font-semibold text-mblack sm:mb-8 mb-6">声明(部分协议)
+                                    </p>
+                                    <p class=" sm:mb-6 mb-5">参与测评的用户需要接受以下条款，否则不要测评。</p>
+                                    <p class=" sm:mb-6 mb-5">1. 本站所有测评及产生的报告仅做个人参考，不做他用。</p>
+                                    <p class=" sm:mb-6 mb-5">2. 本站不对任何因测评报告产生的不良后果负责。</p>
+                                    <p class=" sm:mb-6 mb-5">3. 因测评环境及测评者对待测评的态度不同，测评可能产生较大偏差。</p>
+                                    <p class=" sm:mb-6 mb-5">4. 参与测评的用户可能在其他网站或APP等平台中得到不一样的报告。</p>
+                                    <p class=" sm:mb-6 mb-5">5. 心理承受力差者或者有心理疾病者，建议咨询专业心理医生，不要测评。</p>
+                                    <p class=" sm:mb-6 mb-5">6. 未成年人须征得家长允许和监督下进行测评。</p>
+                                    
+                                </div>
+                            </span>
+                        </div>
+
+                        <img src="./img/lastimg.png" alt="" @click="lastAnswer" class="h-22px sm:h-9 inline-block cursor-pointer" v-show="idx > 0">
+                    </div>
+
+                    
+
+                    <img src="./img/m-cs-logo.png" alt=" " class="sm:h-10  h-5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+
+
+                    <div class="flex items-center">
+                       
+                            
+                        <div class="relative z-20 ml-4">
+                            <img src="./img/m-cs-gd.png" alt="" @click='iftanchang(1)'
+                                class="w-22px h-22px sm:w-9 sm:h-9 cursor-pointer">
+    
+                            <div class="w-36 sm:w-56 absolute  px-3 sm:px-6 sm:py-8 py-5 z-10 -right-1 top-6 sm:top-8 hidden"
+                            style="background: url('./img/navrightbg.png');background-size: 100% 100%;" id="pcnav"
+                                ref="pcnav">
+                            
+                            <a href="./"
+                                class="text-base sm:text-xl block text-hublue p-2.5 pr-0  hover:bg-skyblue hover:text-white rounded">霍兰德测试</a>
+                            <a href="/mbti/"
+                                class="text-base sm:text-xl block text-hublue p-2.5 pr-0  hover:bg-skyblue hover:text-white rounded">MBTI性格测试</a>
+                            </div>
+                        </div>
+                    </div> 
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    <div class='absolute w-full z-10' v-show="answerAgain">
+      <div class="bg-skyblue text-white h-100vh container mx-auto 
+      sm:mt-7 h-48rem relative text-center pt-32 sm:pt-28">
+        <p class=" font-semibold mb-8 text-2xl sm:text-38 sm:mb-11">注意</p>
+        <p class="mb-5 text-lg leading-relaxed  w-64 sm:w-510px
+      sm:leading-loose mx-auto sm:text-2rem sm:h-52 h-24">上次答题未完成，是否继续？</p>
+        <div class="flex justify-between">
+
+          <a @click="ifcontinue()" class="cursor-pointer sm:text-lg mt-12 sm:mt-16 w-32  rounded-full
+                  text-center bg-white  py-3.5 px-5 text-skyblue mx-auto flex items-center justify-center">继续答题 <img
+              src="./img/btn-right.png" alt="" class="ml-1 h-14px"> </a>
+
+          <a @click="afresh()" class="cursor-pointer sm:text-lg ml-6 mt-12 sm:mt-16 w-32  rounded-full
+                  text-center bg-white  py-3 px-5 text-skyblue mx-auto flex items-center justify-center">重新答题 <img
+              src="./img/btn-right.png" alt="" class="ml-1 h-14px"> </a>
+
+        </div>
+      </div>
+    </div>
+
+    <div v-show="iftishi1" class=" bg-skyblue text-white h-100vh container mx-auto 
+            sm:mt-20 sm:h-600 relative text-center pt-32 sm:pt-28">
+      <p class=" font-semibold mb-8 text-2xl sm:text-38 sm:mb-11">声 明</p>
+      <p class="mb-5 text-lg leading-relaxed  w-200px sm:w-600px
+            sm:leading-loose mx-auto sm:text-2rem sm:h-52 h-24 text-left">高考专业版依据约翰·霍兰德（John Holland）理论以及ChatGPT大数据模型研发而成，任何组织或个人禁止复制盗版 √
+		<br/>我已阅读并同意<a href="/yhxx.html">用户协议</a>和<a href="/yszc.html">隐私政策</a> √</p>
+      <a @click="tishi1()" class="cursor-pointer sm:text-lg mt-14 sm:mt-20 w-24  rounded-full
+                    text-center bg-white  py-1 px-5 text-skyblue mx-auto flex items-center justify-center">继续 <img
+          src="./img/btn-right.png" alt="" class="ml-1 h-14px"> </a>
+    </div>
+    <div v-show="iftishi2" class=" bg-skyblue text-white h-100vh container mx-auto 
+            sm:mt-20 sm:h-600 relative text-center pt-32 sm:pt-28">
+      <p class=" font-semibold mb-8 text-2xl sm:text-38 sm:mb-11">提 示 一</p>
+      <p class="mb-5 text-lg leading-relaxed  w-64 sm:w-510px
+            sm:leading-loose mx-auto sm:text-2rem sm:h-52 h-24 text-left">测评选项没有对错之分，如果您想对自己有一个真实的认知，请根据自己的实际情况选择是或否 √</p>
+      <a @click="tishi2()"
+        class="cursor-pointer sm:text-lg mt-12 sm:mt-16 w-24 
+                    text-center bg-white rounded-full py-1 px-5 text-skyblue mx-auto flex items-center justify-center">继续 <img
+          src="./img/btn-right.png" alt="" class="ml-1 h-14px"></a>
+    </div>
+    <div v-show="iftishi3" class=" bg-skyblue text-white h-100vh container mx-auto 
+            sm:mt-20 sm:h-600 relative text-center pt-32 sm:pt-28">
+      <p class=" font-semibold mb-8 text-2xl sm:text-38 sm:mb-11">提 示 二</p>
+      <p class="mb-5 text-lg leading-relaxed  w-72 sm:w-540px 
+            sm:leading-loose mx-auto sm:text-2rem sm:h-52 h-24 text-left">
+            本测试题共60题，测试时间为<b>20</b>分钟。
+      </p>
+      <a @click="tishi3()" class="cursor-pointer sm:text-lg mt-12 sm:mt-16  w-24 flex items-center justify-center
+                    text-center bg-white rounded-full py-1 px-5 text-skyblue mx-auto">继续 <img src="./img/btn-right.png"
+          alt="" class="ml-1 h-14px"></a>
+    </div>
+    <div v-show="iftishi4" class=" bg-skyblue text-white h-100vh container mx-auto 
+            sm:mt-20 sm:h-600 relative text-center pt-32 sm:pt-28">
+
+      <p class=" font-semibold mb-5 text-2xl sm:text-38 sm:mb-11">提 示 三</p>
+
+    <p class="mb-5 text-lg leading-relaxed  w-72 sm:w-540px 
+            sm:leading-loose mx-auto sm:text-2rem sm:h-52 h-24 text-left">
+       现在，请找到一个安静的场所...</p>
+
+      <a @click="test()" class="cursor-pointer sm:text-lg mt-12 sm:mt-20 block w-52 
+                    text-center bg-white rounded py-1 px-7 text-skyblue mx-auto">开始测试</a>
+    </div>
+
+    <div class="mx-3 sm:container sm:mx-auto sm:mt-7 sm:bg-white " v-if="idx != -1">
+
+      <div class="  flex justify-between items-center sm:b-dd sm:px-7 sm:h-20" v-if="idx != 60">
+        <div class="hidden sm:flex text-2xl items-center"><span class=" text-skyblue font-semibold text-3xl mr-1">{{idx + 1}}</span>
+          / 60</div>
+        <div class="bg-blue-200 rounded-full w-1/3 h-4 hidden sm:block">
+          <div class="bg-skyblue rounded-full h-4 " :style="{width: (idx + 1)/60*100 + '%'}"></div>
+        </div>
+
+        <div class="sm:flex justify-between items-center hidden">
+          <img src="./img/m-cs-time.png" alt="" class=" w-7 h-7 mr-2">
+          <div class="text-green-600 text-2xl">{{minute}}:{{second}}</div>
+        </div>
+
+      </div>
+
+      <div class=" overflow-hidden relative">
+        <transition-group name="list" mode="out-in">
+
+          <div v-for="(item,index) in questions" :key="item" v-show="index==idx" class="sm:px-7   sm:h-650 h-500">
+            <div class="title text-22 text-shenblue font-semibold mt-4
+               sm:mt-10 sm:text-2xl sm:font-medium sm:mb-12">
+              {{idx + 1}}. {{item.name}}
+            </div>
+
+
+            <div class="sm:mt-5  mt-14" >
+              <div v-for="val in item.option" :key="val.id" class="relative cursor-pointer   text-555   
+                  sm:mx-0 sm:mb-30px sm:text-2xl text-xl   flex justify-center
+                   mb-5 rounded sm:text-left sm:py-5 sm:px-10 py-3 px-4 border-2 border-c8e" :class="{bgc3 : val.checked}"
+                @click="handleCilck(val,item.id)">
+                <span class=" px-1" >{{val.id==1?'A':'B'}}、</span>{{val.name}}
+              </div>
+            </div>
+
+          </div>
+
+        </transition-group>
+      </div>
+
+      <div class="flex justify-between items-center sm:hidden w-full" v-if="idx != 60">
+        <div><span class=" text-skyblue font-semibold">{{idx + 1}}</span> / 60</div>
+        <div class="bg-blue-200 rounded-full w-1/2 h-2.5 ">
+          <div class="bg-skyblue rounded-full h-2.5 " :style="{width: (idx + 1)/60*100 + '%'}"></div>
+        </div>
+        <div class="flex justify-between items-center">
+          <img src="./img/m-cs-time.png" alt="" class=" w-4 h-4 mr-2">
+          <div>{{minute}}:{{second}}</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div v-if="timeout" class=" bg-skyblue text-white h-100vh container mx-auto 
+                  sm:mt-20 sm:h-600 relative text-center pt-32 sm:pt-28">
+
+      <p class=" font-semibold mb-5 text-2xl sm:text-38 sm:mb-11">时间已到</p>
+
+    </div>
+   <div v-if="timefast" class=" bg-skyblue text-white h-100vh container mx-auto sm:mt-20 sm:h-600 relative text-center pt-32 sm:pt-28">  
+      <p class=" font-semibold mb-5 text-2xl sm:text-38 sm:mb-11">答题时间过短，存在刷题行为，答题无效！</p>
+    </div>
+
+   
+  </div>
+  <script type="text/javascript"  src ="../js/crypto-js/crypto-js.js"></script> 
+  <script src="/js/vue.min.js"></script>
+  <script src="./js/hld.js"></script>
+
+</body>
+
+</html>

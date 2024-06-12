@@ -1,0 +1,70 @@
+.clg-botbox {
+  padding-top: 32px;
+  display: block;
+  text-align: center;
+  width: 400px;
+  height: 160px;
+  background: linear-gradient(180deg, #EFF8FF 0%, #FFFFFF 100%);
+  box-shadow: 0px 4px 10px rgba(0, 65, 134, 0.12);
+  border-radius: 8px;
+  font-size: 2rem;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  line-height: 3.125rem;
+  color: #5AB221;
+}
+
+.clg-botbox .btn {
+  display: block;
+  margin: 15px auto 0;
+  width: 128px;
+  height: 44px;
+  background: #5AB221;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 2.75rem;
+  color: #FFFFFF;
+}
+
+@media (min-width:500px) and (max-width:900px){
+  .clg-botbox {
+    width: 350px;
+  }
+}
+
+@media (max-width:500px) {
+  .clg-botbox {
+    padding-top: 15px;
+    width: 148px;
+    height: 84px;
+    background: linear-gradient(180deg, #EFF8FF 0%, #FFFFFF 100%);
+    box-shadow: 0px 2px 6px rgba(0, 65, 134, 0.12);
+    opacity: 1;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: Source Han Sans CN;
+    font-weight: bold;
+    line-height: 1.1875rem;
+    color: #5AB221;
+    font-size: 0.875rem;
+  }
+
+  .clg-botbox .btn {
+    width: 68px;
+    height: 24px;
+    font-size: 0.75rem;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    line-height: 1.5rem;
+    border-radius: 4px;
+    margin: 12px auto 0;
+  }
+}
+
+@media (max-width:365px) {
+  .clg-botbox {
+    width: 160px;
+  }
+}

@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>霍兰德职业兴趣测试报告-高考专业版</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/change.css">
+    <link rel="stylesheet" href="./css/copyandmore.css">
+    <link rel="stylesheet" href="./css/mbtichange.css">
+ <script src="/js/nocopy.js"></script> 
+</head>
+
+<body id="hldpage">
+    <div id="result" class="sm:bg-f5f" style="letter-spacing: 1px;">
+
+        <div ref="zhezhao" class="cursor-pointer z-10 w-full h-full fixed top-0 left-0 hidden"
+            style="background: rgba(0,0,0,0.1);" @click="myclose()" @touchmove.prevent></div>
+
+        <div class="my-shadow w-full bg-white">
+            <div class="hidden container mx-auto bg-white sm:flex justify-between items-center pt-8 pb-6 px-5">
+                <img src="./img/m-re-logo2.png" alt="" class="sm:w-24  xl:w-32">
+
+                <!-- 导航 -->
+                <div
+                    class="flex justify-between items-center text-lg sm:text-xs md:text-base xl:text-lg text-skyblue mypcnav">
+                    <a href="./" class=" xl:mx-4 mr-2 font-semibold">霍兰德测试</a>
+                    <a href="/mbti/" class=" xl:mx-4 mr-2 font-semibold">MBTI性格测试</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="nav"
+            class="bg-white px-3 py-3 sm:hidden relative my-shadow h-12 sm:h-28 flex justify-between items-center">
+
+
+            <div class=" container mx-auto flex justify-between items-center">
+                <div class="relative flex items-center">
+                    <img src="./img/m-cs-gd.png" alt="" @click='iftanchang()'
+                        class="w-22px h-22px sm:w-9 sm:h-9 cursor-pointer">
+
+                    <!-- <a href="/" class="mqybtn"><img src="./img/qybbtn1.png"></a> -->
+
+                    <div class="w-44 sm:w-56 absolute top-6 sm:top-10 -left-4 px-3 sm:px-6 py-10 z-10 hidden"
+                        style="background: url('./img/nav-bg.png');background-size: 100% 100%;" id="pcnav" ref="pcnav">
+                        <a href="./"
+                            class="text-base sm:text-xl block text-hublue p-2.5  hover:bg-skyblue hover:text-white rounded">高考专业测试</a>
+                        <a href="/mbti/"
+                            class="text-base sm:text-xl block text-hublue p-2.5  hover:bg-skyblue hover:text-white rounded">MBTI性格测试</a>
+
+                    </div>
+                </div>
+                <img src="./img/m-cs-logo.png" alt=" "
+                    class="sm:h-10  h-5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+
+            </div>
+        </div>
+
+        <div class=" sm:container mx-auto sm:pb-8 pb-5">
+
+            <div class="rounded-2xl mx-auto px-3 pt-7 pb-8  sm:mt-7 sm:pt-12 sm:pb-10 bg-white sm:qs-home-shadow">
+                <p class="text-linegreen font-semibold text-22 sm:text-40 text-center">
+                    恭喜您已完成测评
+                </p>
+                <img src="./img/m-re-logo.png" class="mt-7 w-48 h-auto mx-auto sm:mt-12 sm:w-400px">
+            </div>
+
+            <div class=" sm:mt-7 mt-11 bg-white sm:pt-8 sm:px-5 rounded-2xl sm:qs-home-shadow sm:pb-9 ">
+
+                <div class="sm:flex justify-between mx-3 sm:mx-0">
+                    <div
+                        class=" flex items-center sm:text-2xl lg:text-38 text-22 text-linegreen font-semibold mb-4 sm:mb-9 sm:w-50e">
+                        <img src="./img/sld-img5.png" alt="" class="mr-4 h-9 hidden sm:block"> 霍兰德职业兴趣报告
+                    </div>
+
+                    <div
+                        class="sm:ml-7  text-999 lg:text-xl text-sm flex sm:justify-center items-end mb-9 sm:mb-9 sm:w-50e">
+                        <span class=" text-555 text-base mr-7 lg:text-3xl font-semibold">{{userName}}</span>
+                        <span>{{sex}}</span>
+
+                    </div>
+                </div>
+
+                <div class="sm:flex justify-between">
+                    <div
+                        class=" mt-5  bg-white sm:rounded-2xl sm:w-50e sm:p-5 sm:py-7 sm:mt-0 sm:mx-0 mx-3 mb-20 sm:mb-0">
+                        <div
+                            class="sm:border border-t sm:border-DEF0D2 border-linegreen sm:rounded-2xl sm:w-3/4 mx-auto sm:h-80 lg:h-400px relative">
+                            <div
+                                class="sm:block inline-block bg-white px-5 sm:p-0 sm:rounded-2xl sm:static absolute -top-5 left-1/2 sm:-translate-x-0 -translate-x-1/2">
+                                <div class="hld-active ">您的兴趣代码{{hldCode}}</div>
+                            </div>
+
+                            <div class="h-64 relative">
+                                <div class="hld-rebg1"></div>
+                                <div class="hld-rebg2"></div>
+                                <div class="hld-rebg3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" mt-5  bg-white sm:rounded-2xl sm:w-50e sm:p-5 sm:py-7 sm:mt-0 sm:mx-0 mx-3 ">
+                        <div
+                            class="sm:border border-t sm:border-DEF0D2 border-linegreen sm:rounded-2xl sm:w-3/4 mx-auto sm:h-80 lg:h-400px relative">
+                            <div
+                                class="sm:block inline-block bg-white px-5 sm:p-0 sm:rounded-2xl sm:static absolute -top-5 left-1/2 sm:-translate-x-0 -translate-x-1/2">
+                                <div class="hld-active">您的各类型占比</div>
+                            </div>
+
+                            <div id="mychart" class="w-full sm:mt-3 h-64 mx-auto mt-3" :style="`zoom:${zoom};`"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <p class="mt-4 sm:mt-5 mx-3 sm:mx-0 sm:text-2xl font-semibold text-lg text-skyblue mb-4 sm:mb-5">提示:</p>
+                <p
+                    class="mx-3 sm:mx-0 bg-f0f sm:text-xl sm:leading-10 text-mblack sm:p-5 sm:rounded-2xl rounded px-3 py-5 leading-8">
+                    除了关注得分最高的前三项{{hldCode}}，找到适合自己发展的职业领域外，还建议您也特别关注一下自己最不适合发展的职业领域，即得分最低的那个类型所指向的领域，避免长时间在不适合自己发展的职业领域探索。
+                </p>
+            </div>
+
+            <div class="sm:mt-7 mt-11 bg-white sm:pt-8 sm:px-5 rounded-2xl sm:qs-home-shadow sm:pb-9 mx-3 sm:mx-0 ">
+                <div
+                    class=" flex items-center sm:text-2xl lg:text-38 text-22 text-skyblue font-semibold mb-4 sm:mb-9 sm:w-50e">
+                    各类型的特点及职业建议
+                </div>
+
+                <canvas id="myCanvas" class=" mx-auto my-5 "></canvas>
+
+            </div>
+
+            <div class="sm:mt-7 mt-11 bg-white sm:pt-8 sm:px-5 rounded-2xl sm:qs-home-shadow sm:pb-9 mx-3 sm:mx-0 ">
+                <div
+                    class=" flex items-center sm:text-2xl lg:text-38 text-22 text-skyblue font-semibold mb-4 sm:mb-9 sm:w-50e">
+                    您的类型分析及职业建议
+                </div>
+
+                <div class=" flex flex-wrap">
+                    <div class="nR leading-8 sm:text-xl text-mblack sm:leading-10   border-b border-DDD  ">
+                        <div
+                            class=" text-shenblue text-lg flex flex-wrap items-center font-semibold sm:text-2xl sm:mb-8 pl-2 my-5 sm:mt-16 sm:h-12 h-10 ">
+                            <div class="sm:w-8 sm:h-5 w-4 h-2.5 rounded-full bg-lgreen mr-2 sm:mr-2.5"></div>
+                            R：现实型（Realistic）<span class="ranking"></span>
+                        </div>
+                        <p class="sm:mb-4 mb-1  text-org font-semibold">【性格特点】</p>
+                        <p class="pl-2  mb-5 sm:mb-5">
+                            愿意使用工具从事操作性工作，动手能力强，做事手脚灵活，动作协调。偏好于具体任务，不善言辞，做事保守，较为谦虚。缺乏社交能力，通常喜欢独立做事。</p>
+                        <p class="pl-2  mb-5 sm:mb-10">谨慎谦虚，认真细致，踏实稳重，诚实可靠，关注现实。</p>
+                        <p class="sm:mb-4 mb-1  text-827 font-semibold">【职业特质】</p>
+                        <p class="pl-2  mb-5 sm:mb-5 text-shenblue">
+                            现实型人的兴趣偏向于动手操作，他们喜欢直接面对实际事物并寻找对应的解决方案。通常喜欢从事现实和实用性强的工作，喜欢将工作与物质生活联系在一起，以获得稳定和可靠的收入来源。他们的职业范围广泛，包括建筑工程、机械制造、交通运输、农业和自然保护等领域，主要职业特质如下：
+                        </p>
+                        <div class="zytz">
+                            <p class="zytz-p">1、<b>动手能力强：</b>现实型人通常具有较强的动手能力，他们喜欢通过实践来解决问题。</p>
+                            <p class="zytz-p">2、<b>喜欢物质世界：</b>现实型人对物质世界、机械装置等具有浓厚的兴趣。</p>
+                            <p class="zytz-p">3、<b>具有机械和技术特长：</b>现实型人通常具备一些机械和技术特长，他们善于使用各种工具和机器，能够迅速掌握新的技能。</p>
+                            <p class="zytz-p">4、<b>喜欢体育运动：</b>现实型人通常喜欢体育运动，他们喜欢在强体力劳动中获得乐趣。</p>
+                            <p class="zytz-p">5、<b>喜欢实用性强的工作：</b>现实型人通常喜欢从事实用性强的工作，例如机械维修、焊接、电工等。</p>
+                            <p class="zytz-p">6、<b>偏好现实和具体的工作：</b>现实型人偏好从事需要具体实践和现实技能的工作，而不是抽象的和理论性的工作。</p>
+                            <p class="zytz-p">7、<b>偏好稳定的工作：</b>现实型人通常喜欢从事稳定的工作，例如经营管理、航空和航天、银行保险等。</p>
+                            <p class="zytz-p">8、<b>适应力强：</b>现实型人通常具有较强的适应能力，善于在各种工作环境中适应自己。</p>
+                            <p class="zytz-p">9、<b>喜欢自然环境：</b>现实型人通常喜欢接触自然的工作环境，例如户外工作、农业、林业和渔业等。</p>
+                        </div>
+
+                        <p class="sm:mb-4 mb-1  text-00B3E8 font-semibold">【职业建议】</p>
+                        <p class="pl-2  mb-5 sm:mb-10">
+                            喜欢使用工具、机器，需要基本操作技能的工作。要求具备机械方面才能、体力、或从事与物件、机器、工具、运动器材、植物、动物相关的职业有兴趣,并具备相应能力。</p>
+                        <p class="sm:mb-4 mb-1  text-00BB3E font-semibold">【适合职业】</p>
+                        <p class="pl-2 sm:mb-5 mb-5 text-shenblue">
+                            现实型（R）的人通常喜欢实际操作和解决问题，具有机械、工程、技术、体育等方面的天赋和兴趣。喜欢通过实际的努力和行动来达到目标，强调实用性和现实性，行事务实、坦诚直率、注重实际效果，强调结果和成果。因此，适合的典型职业有：
+                        </p>
+
+                        <div class="okjob-ul">
+                            <div class="okjob-li">
+                                <div class="okjob-title">机械师</div>
+                                <div class="okjob-p">制造、修理和维护机械设备，需要具备技术和操作能力。例如汽车维修师、机械加工技工、机修工、摄影师、制图员、机械装配工等技术类岗位。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">技工</div>
+                                <div class="okjob-p">需要具备精通某项技术的能力，可以进行机器维修、安装、调整、保养等工作。例如木工、钳工、铁工、厨师、技工、修理工、农民等技能类岗位。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">设计师</div>
+                                <div class="okjob-p">可以进行结构、产品、工艺、电路等各种设计工作，需要具备创造力和实践能力。例如产品设计师、造型设计师、CAD设计师等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">工程师</div>
+                                <div class="okjob-p">主要从事各种工程设计和管理工作，需要具备系统性的思考和计划能力。例如土木工程师、机械工程师、电气工程师、计算机硬件人员等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">建筑工</div>
+                                <div class="okjob-p">需要具备专业知识和技能，从事建筑施工、装修、监理等工作。例如瓦工、电工、管道工等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">体育教练</div>
+                                <div class="okjob-p">需要具备专业技能和人际交往能力，可以指导、培训、管理体育项目。例如足球教练、游泳教练、健身教练等。</div>
+                            </div>
+                        </div>
+                        <p class="sm:mb-4 mb-1  text-00BB3E font-semibold">【专业选择】</p>
+                        <p class="pl-2 sm:mb-16 mb-5">
+                            现实型（Realistic）：喜欢实际操作、技术性工作，喜欢解决实际问题。适合的大学专业包括工程学、农业科学、建筑学、机械工程、计算机科学、医疗技术、航空与航天工程、物流与供应链管理等。详细如下：
+
+                        </p>
+                        <div class="zytz">
+                            <p class="zytz-p">1、<b>工程类：</b>机械工程、电气工程、土木工程等。</p>
+                            <p class="zytz-p">2、<b>信息技术类：</b>计算机科学、软件工程、网络工程</p>
+                            <p class="zytz-p">3、<b>数学与统计类：</b>数学与应用数学、统计学</p>
+                            <p class="zytz-p">4、<b>自然科学类：</b>物理学、化学、地球科学</p>
+                            <p class="zytz-p">5、<b>医学与健康科学类：</b>医学、药学、护理学</p>
+                            <p class="zytz-p">6、<b>农学与环境科学类：</b>农业科学、环境科学</p>
+                            <p class="zytz-p">7、<b>商科类：</b>会计学、金融学、市场营销学</p>
+                            <p class="zytz-p">8、<b>教育类：</b>教育学、特殊教育学</p>
+                            <p class="zytz-p">9、<b>法律与社会科学类：</b>法学、社会学、心理学</p>
+                            <p class="zytz-p">10、<b>建筑与规划类：</b>建筑学、城市规划等。</p>
+                            <p class="zytz-p">11、<b>生命科学类：</b>生物科学、生物技术等。</p>
+                            <p class="zytz-p">12、<b>物流与供应链管理类：</b>物流管理、供应链管理等。</p>
+                            <p class="zytz-p">13、<b>传媒与传播类：</b>新闻学、广告学、传媒学等。</p>
+                            <p class="zytz-p">14、<b>美容与美发类：</b>美容美发技术、化妆品技术等。</p>
+                            <p class="zytz-p">15、<b>土地资源管理类：</b>土地资源管理、地理信息系统等。 </p>
+                        </div>
+                        <p class="pl-2 sm:mb-16 mb-5">
+                            总之，现实型的人适合职业一般都需要具有实际操作技能和实用性，并且需要重视实践和创新能力，同时也需要注意团队合作和沟通能力的拓展。然而，这只是一些例子，具体选择还应根据个人的兴趣、能力和目标来决定。
+                        </p>
+
+                    </div>
+
+                    <div class="nS leading-8 sm:text-xl text-mblack sm:leading-10   border-b border-DDD">
+                        <div
+                            class=" text-shenblue text-lg flex flex-wrap items-center font-semibold sm:text-2xl sm:mb-8 pl-2 my-5 sm:mt-16 sm:h-12 h-10 ">
+                            <div class="sm:w-8 sm:h-5 w-4 h-2.5 rounded-full bg-lgreen mr-2 sm:mr-2.5"></div>
+                            S：社会型（Social）<span class="ranking"></span>
+                        </div>
+                        <p class="sm:mb-4 mb-1  text-org font-semibold">【性格特点】</p>
+                        <p class="pl-2  mb-5 sm:mb-5">
+                            喜欢与人交往、不断结交新的朋友、善言谈、愿意教导别人。关心社会问题、渴望发挥自己的社会作用。寻求广泛的人际关系，比较看重社会义务和社会道德。</p>
+                        <p class="pl-2  mb-5 sm:mb-10">为人友好、热情、善解人意、乐于助人。</p>
+                        <p class="sm:mb-4 mb-1  text-827 font-semibold">【职业特质】</p>
+                        <p class="pl-2  mb-5 sm:mb-5 text-shenblue">
+                            社会型人在工作中注重人与人之间的互动和联系，能够为他人的发展和提高做出贡献。他们通常从事与人有关的各种工作，并且乐于与其他人合作来实现共同的目标和利益，主要职业特质如下：</p>
+                        <div class="zytz">
+                            <p class="zytz-p">1、<b>关心他人：</b>社会型人相对于其他类型的人更为关注他人，他们往往乐于帮助他人并愿意为其他人着想。</p>
+                            <p class="zytz-p">2、<b>善于交际：</b>社会型人善于与他人交际，总是能够获得他人的信任和尊重。</p>
+                            <p class="zytz-p">3、<b>具备教育和治疗能力：</b>社会型人善于对他人进行教育和治疗，例如教育、医疗卫生、心理辅导等。</p>
+                            <p class="zytz-p">4、<b>具备指导和辅导能力：</b>社会型人善于指导和辅导他人，能够帮助他人解决问题和实现自我发展。</p>
+                            <p class="zytz-p">5、<b>喜欢团队合作：</b>社会型人喜欢与他人合作，并且乐意分享成果和成就。</p>
+                            <p class="zytz-p">6、<b>偏好社会和人文领域：</b>社会型人的职业兴趣往往偏好社会和人文领域，例如教育、医疗卫生、社会服务、社会工作、公共事务、心理咨询等。
+                            </p>
+                            <p class="zytz-p">7、<b>推动社会进步：</b>社会型人致力于推动社会进步，他们努力工作来帮助那些需要帮助的人，并通过各种社会活动和组织来改善社会状况。</p>
+                            <p class="zytz-p">8、<b>善于倾听：</b>社会型人善于倾听他人的需求和诉求，他们能够为他人提供适当的建议和支持。</p>
+                            <p class="zytz-p">9、<b>擅长处理人际关系：</b>社会型人擅长处理人际关系，他们能够平衡不同人群之间的关系，协调组织内部的矛盾。</p>
+                        </div>
+
+
+                        <p class="sm:mb-4 mb-1  text-00B3E8 font-semibold">【职业建议】</p>
+                        <p class="pl-2  mb-5 sm:mb-10">喜欢要求与人打交道的工作，能够不断结交新的朋友，从事提供信息、启迪、帮助、培训、开发或治疗等事务，并具备相应能力。</p>
+                        <p class="sm:mb-4 mb-1  text-00BB3E font-semibold">【适合职业】</p>
+                        <p class="pl-2 sm:mb-5 mb-5 text-shenblue">社会型（Social）的人适合需要人际交往和关心服务他人的职业，适合的典型职业主要有：</p>
+
+                        <div class="okjob-ul">
+                            <div class="okjob-li">
+                                <div class="okjob-title">社会工作者</div>
+                                <div class="okjob-p">主要从事帮助弱势群体、改善社会福利和服务的工作，需要具有同情心和解决问题的能力。例如社区服务工作者、病人护理员、心理医生、志愿者等。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">人力资源专员</div>
+                                <div class="okjob-p">负责对公司的人力资源进行管理和招聘，需要具有洞察人性和组织能力。例如招聘专员、培训专员、人力资源经理等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">教师或培训师</div>
+                                <div class="okjob-p">主要从事教育和培训工作，需要具有较好的社交能力、组织能力和沟通表达能力。例如小学教师、高中教师、艺术导师、培训讲师、教育工作者等。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">咨询师</div>
+                                <div class="okjob-p">
+                                    为个人或组织提供咨询服务，需要有帮助别人解决问题的技能和技巧。例如婚姻家庭咨询师、心理咨询师、生活指导师、管理咨询顾问、各领域咨询顾问等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">媒体从业者</div>
+                                <div class="okjob-p">主要从事新闻、广告、电影等领域的工作，需要具有创意以及优秀的口头表达和写作能力。例如记者、广告策划师、编剧、主持人、新闻媒体人等。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">公共关系人员</div>
+                                <div class="okjob-p">需要与媒体和公众打交道的工作，需要具有沟通和协调能力。例如公关专员、公众事务经理、活动策划师等。</div>
+                            </div>
+                        </div>
+                        <p class="sm:mb-4 mb-1  text-00BB3E font-semibold">【专业选择】</p>
+                        <p class="pl-2 sm:mb-16 mb-5">
+                            社会型（Social）：喜欢与人合作和帮助他人，关心人际关系和社会问题，适合的大学专业包括社会工作、心理学、教育学、医学与护理、公共关系、人力资源管理、社会学等。详细如下：</p>
+
+                        <div class="zytz">
+                            <p class="zytz-p">1、<b> 心理学类：</b>心理学、社会工作学、咨询与治疗等。</p>
+                            <p class="zytz-p">2、<b> 教育类：</b>教育学、特殊教育学、幼儿教育学等。</p>
+                            <p class="zytz-p">3、<b> 医疗与护理类：</b>医学、护理学、康复治疗等。</p>
+                            <p class="zytz-p">4、<b> 社会科学类：</b>社会学、人类学、社会工作学等。</p>
+                            <p class="zytz-p">5、<b> 人力资源管理类：</b>人力资源管理、组织行为学等。</p>
+                            <p class="zytz-p">6、<b> 市场营销与公关类：</b>市场营销学、公关学等。</p>
+                            <p class="zytz-p">7、<b> 社会福利与社会政策类：</b>社会福利学、社会政策学等。</p>
+                            <p class="zytz-p">8、<b> 广告与传媒类：</b>广告学、传媒学、公共关系等。</p>
+                            <p class="zytz-p">9、<b> 社会服务与社会工作类：</b>社会服务与社会工作、社区发展等。</p>
+                            <p class="zytz-p">10、<b>健康与体育类：</b>健康科学、运动科学、体育教育等。</p>
+                            <p class="zytz-p">11、<b>人类发展与家庭学类：</b>人类发展学、家庭学等。</p>
+                            <p class="zytz-p">12、<b>公共事务类：</b>公共管理、公共政策等。</p>
+                            <p class="zytz-p">13、<b>酒店与旅游管理类：</b>酒店管理、旅游管理等。</p>
+                            <p class="zytz-p">14、<b>社会研究与调查类：</b>社会调查研究、社会统计学等。</p>
+                            <p class="zytz-p">15、<b>社会工程学类：</b>社会工程学、社会创新等。</p>
+                        </div>
+
+                        <p class="pl-2  mb-5 sm:mb-16">
+                            总之，社会型的人适合从事需要人际交往和关心他人的职业，重视他人的需要和利益，注重协调和沟通能力。需要寻找一种适合自己的平衡，既能够以此为工作，又能够满足自己给予和获得情感支持的需求。然而，这只是一些例子，具体选择还应根据个人的兴趣、能力和目标来决定。
+                        </p>
+
+                    </div>
+
+                    <div class="nI leading-8 sm:text-xl text-mblack sm:leading-10    border-b border-DDD ">
+                        <div
+                            class=" text-shenblue text-lg flex flex-wrap items-center font-semibold sm:text-2xl sm:mb-8 pl-2 my-5 sm:mt-16 sm:h-12 h-10 ">
+                            <div class="sm:w-8 sm:h-5 w-4 h-2.5 rounded-full bg-lgreen mr-2 sm:mr-2.5"></div>
+                            I：研究型（Investigative）<span class="ranking"></span>
+                        </div>
+                        <p class="sm:mb-4 mb-1  text-org font-semibold">【性格特点】</p>
+                        <p class="pl-2  mb-5 sm:mb-5">
+                            思想家而非实干家，抽象思维能力强，求知欲强、肯动脑、善思考、不愿动手。喜欢独立的和富有创造性的工作。知识渊博、有学识才能，不善于领导他人。考虑问题理性，做事喜欢精确，喜欢逻辑分析和推理，不断探讨未知的领域。
+                        </p>
+                        <p class="pl-2  mb-5 sm:mb-10">坚持性强，有韧性，喜欢钻研。为人好奇，独立性强。</p>
+                        <p class="sm:mb-4 mb-1  text-827 font-semibold">【职业特质】</p>
+                        <p class="pl-2  mb-5 sm:mb-5 text-shenblue">研究型（Investigative）的人职业特质如下：</p>
+                        <div class="zytz">
+                            <p class="zytz-p">1.<b>喜欢思考和解决难题：</b>研究型人具有强烈的好奇心，喜欢探究问题的本质，喜欢思考和解决难题。</p>
+                            <p class="zytz-p">2.<b>擅长分析和推理：</b>研究型人具有分析和推理能力，能够深入思考和分析复杂问题。</p>
+                            <p class="zytz-p">3.<b>热衷于知识和技术：</b>研究型人喜欢探索和学习新的知识和技术，追求知识的深度和广度。</p>
+                            <p class="zytz-p">4.<b>喜欢独立思考和工作：</b>研究型人较为独立，喜欢自主思考和工作。</p>
+                            <p class="zytz-p">5.<b>偏好理论知识：</b>研究型人对理论知识具有浓厚的兴趣，喜欢探究事物的本质和规律。</p>
+                            <p class="zytz-p">6.<b>喜欢调查研究：</b>研究型人喜欢通过调查和研究来积累知识和解决问题。</p>
+                            <p class="zytz-p">7.<b>有较强的抽象思维能力：</b>研究型人具备较强的抽象思维能力，能够将具体问题进行概括和归纳。</p>
+                        </div>
+                        <p class="pl-2  mb-5 sm:mb-10">总的来说，研究型人倾向于从事与科学、技术、创新等领域相关的职业，喜欢深入探究事物的本质和规律，以解决问题或推动科技进步。</p>
+
+
+                        <p class="sm:mb-4 mb-1  text-00B3E8 font-semibold">【职业建议】</p>
+                        <p class="pl-2  mb-5 sm:mb-10">
+                            喜欢智力的、抽象的、分析的、独立的定向任务，要求具备智力或分析才能，并将其用于观察、估测、衡量、形成理论、最终解决问题的工作，并具备相应的能力。</p>
+                        <p class="sm:mb-4 mb-1  text-00BB3E font-semibold">【适合职业】</p>
+                        <p class="pl-2 mb-5 sm:mb-5 text-shenblue">针对研究型（Investigative）的人，以下是一些适合的典型职业:</p>
+                        <div class="okjob-ul">
+                            <div class="okjob-li">
+                                <div class="okjob-title">科学家</div>
+                                <div class="okjob-p">研究型人善于观察并且喜欢探寻知识，因此适合从事科学研究的工作，例如物理学家、化学家、生物学家、地质学家等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">工程师</div>
+                                <div class="okjob-p">研究型人追求真理和对事物的深入了解，因此适合从事需要研发和解决问题的工程师，例如电子工程师、软件工程师、机械工程师和化学工程师等。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">数学家</div>
+                                <div class="okjob-p">研究型人具备逻辑思维和推理的能力，因此适合从事需要运用数学知识解决问题的职业，如数学家、数据分析师、统计学家等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">科学和技术管理职业</div>
+                                <div class="okjob-p">研究型人擅长主导和管理科技项目，因此适合从事科学和技术管理方面的职业，例如科技企业的研发总监，科学院所的主管或管理顾问等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">心理学家</div>
+                                <div class="okjob-p">研究型人善于自省和对人类行为的深入探究，因此适合从事需要分析、理解和解决人类问题的职业，如心理学家、教育心理学家、人类学家等。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">公共卫生专家</div>
+                                <div class="okjob-p">研究型人关注环境和人类健康，因此适合从事与公共卫生有关的职业，如流行病学家、卫生管理员、环保工程师等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">科学记者</div>
+                                <div class="okjob-p">研究型人擅长传达和表达复杂的科学概念或技术知识，因此适合从事科学记者、科学评论员或科学普及工作等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">数据科学家</div>
+                                <div class="okjob-p">研究型人擅长对数据进行分析和研究，因此适合从事数据分析、数据挖掘等数据科学领域的职业。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">大学教授</div>
+                                <div class="okjob-p">研究型人热爱知识并喜欢培养学生，因此适合从事大学教授或研究员等职业。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">物理治疗师</div>
+                                <div class="okjob-p">研究型人擅长深入了解事物，并善于应用知识，因此适合从事物理治疗师、运动医学专家等职业。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">GIS分析师</div>
+                                <div class="okjob-p">GIS (地理信息系统)
+                                    技术可以将地理空间数据转化为图表和图形进行可视化展示，研究型人具备理解地理空间和环境信息的能力，因此适合从事GIS分析师等职业。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">科学图书馆管理</div>
+                                <div class="okjob-p">研究型人擅长收集和整理信息，并善于索引和分类数据，因此适合从事图书馆员、信息专员或情报分析师等职业。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">各领域的研究人员或学者</div>
+                                <div class="okjob-p">如法律、历史、经济、商业等领域的研究人员或学者。</div>
+                            </div>
+                        </div>
+                        <p class="pl-2  mb-5 sm:mb-10">
+                            以上职业能够让研究型（Investigative）的人发挥自己的好奇心和求知欲，追求知识和真理的过程中也能够获得个人成就感和职业满足感。</p>
+                        <p class="sm:mb-4 mb-1  text-00BB3E font-semibold">【专业选择】</p>
+                        <p class="pl-2 sm:mb-16 mb-5">
+                            研究型（Investigative）：喜欢思考、分析、研究和解决复杂问题。适合的大学专业包括生物学、物理学、化学、数学、计算机科学、社会科学研究、心理学等。详细如下：</p>
+                        <div class="zytz">
+                            <p class="zytz-p">1、 <b>科学类：</b>物理学、化学、生物学、地球科学等。</p>
+                            <p class="zytz-p">2、 <b>工程与技术类：</b>计算机科学、软件工程、电子工程、机械工程等。</p>
+                            <p class="zytz-p">3、 <b>数学与统计类：</b>数学、统计学、应用数学等。</p>
+                            <p class="zytz-p">4、 <b>医学与健康科学类：</b>医学、药学、生物医学工程等。</p>
+                            <p class="zytz-p">5、 <b>社会科学类：</b>心理学、社会学、经济学、政治学等。</p>
+                            <p class="zytz-p">6、 <b>文化研究与人文学科类：</b>历史学、人类学、考古学、文学研究等。</p>
+                            <p class="zytz-p">7、 <b>数据科学与分析类：</b>数据科学、数据分析、商业分析等。</p>
+                            <p class="zytz-p">8、 <b>教育与教育技术类：</b>教育学、教育技术、学习科学等。</p>
+                            <p class="zytz-p">9、 <b>环境与可持续发展类：</b>环境科学、可持续发展、环境工程等。</p>
+                            <p class="zytz-p">10、 <b>农业与农业科学类：</b>农业科学、农业经济学、农业工程等。</p>
+                            <p class="zytz-p">11、 <b>能源与环境工程类：</b>能源工程、环境工程、可再生能源等。</p>
+                            <p class="zytz-p">12、 <b>信息科学与图书馆学类：</b>信息科学、图书馆学、知识管理等。</p>
+                            <p class="zytz-p">13、 <b>物理与天文学类：</b>物理学、天文学、宇宙学等。</p>
+                            <p class="zytz-p">14、 <b>地理与地球科学类：</b>地理学、地球科学、地球物理学等。</p>
+                            <p class="zytz-p">15、 <b>研究方法学与实验设计类：</b>研究方法学、实验设计、数据分析等。</p>
+
+                        </div>
+                        <p class="sm:mb-4 mb-1  text-F36161 font-semibold">【注意事项】</p>
+                        <p class="pl-2 sm:mb-16 mb-5">
+                            调研工作中I值高的人做事较为坚持，有韧性，善始善终；调研I值低的人通常做事容易浅尝辄止。然而，最重要的是根据个人的兴趣、能力和目标来选择适合自己的专业。</p>
+                    </div>
+
+                    <div class="nC leading-8 sm:text-xl text-mblack sm:leading-10   border-b border-DDD">
+                        <div
+                            class=" text-shenblue text-lg flex flex-wrap items-center font-semibold sm:text-2xl sm:mb-8 pl-2 my-5 sm:mt-16 sm:h-12 h-10 ">
+                            <div class="sm:w-8 sm:h-5 w-4 h-2.5 rounded-full bg-lgreen mr-2 sm:mr-2.5"></div>
+                            C：传统型（Conventional）<span class="ranking"></span>
+                        </div>
+                        <p class="sm:mb-4 mb-1  text-org font-semibold">【性格特点】</p>
+                        <p class="pl-2  mb-5 sm:mb-5">
+                            尊重权威和规章制度，喜欢按计划办事，细心、有条理，习惯接受他人的指挥和领导，自己不谋求领导职务。喜欢关注实际和细节情况，通常较为谨慎和保守，缺乏创造性，不喜欢冒险和竞争，富有自我牺牲精神。
+                        </p>
+                        <p class="pl-2  mb-5 sm:mb-10">有责任心、依赖性强、高效率、稳重踏实,细致,有耐心。</p>
+                        <p class="sm:mb-4 mb-1  text-827 font-semibold">【职业特质】</p>
+                        <p class="pl-2  mb-5 sm:mb-5 text-shenblue">传统型（Conventional）的人通常表现出以下职业特质：</p>
+
+                        <div class="zytz">
+                            <p class="zytz-p">1.<b>社交：</b>重视与他人的合作、协调和相互支持，愿意与人打交道，善于建立和维持工作关系。</p>
+                            <p class="zytz-p">2.<b>谨慎：</b>具有谨慎、有组织、可靠的个性特征，注重细节和精确性，喜欢遵循规范、程序和规则。</p>
+                            <p class="zytz-p">3.<b>勤奋：</b>具有勤勉、努力、有耐力的品质，愿意付出较多的时间和精力来完成任务并获得成功。</p>
+                            <p class="zytz-p">4.<b>责任心：</b>对工作和自己的行为负责，在工作中经常表现出复杂性和责任感。</p>
+                            <p class="zytz-p">5.<b>实用：</b>注重实用性和实际问题的解决，擅长运用实际性知识和技能，追求实际问题的解决。</p>
+                            <p class="zytz-p">6.<b>顺从：</b>在工作环境中，传统型人通常遵守规则和权威，愿意服从和接受指导。</p>
+                            <p class="zytz-p">7.<b>细致：</b>传统型人通常善于处理细节，注重精确和准确性。</p>
+                            <p class="zytz-p">8.<b>保守：</b>传统型人通常具有保守的思想倾向，在面对新想法或尝试新事物时，可能会保持谨慎和观望的态度。</p>
+                            <p class="zytz-p">9.<b>保密：</b>传统型人通常非常注重保密和保护信息的安全。</p>
+                            <p class="zytz-p">10.<b>可靠：</b>传统型人通常是一种可靠的员工，很少出现迟到早退、缺勤等情况。</p>
+                            <p class="zytz-p">11.<b>能够承受压力：</b>传统型人通常能够在工作压力和工作量较大的情况下快速适应。</p>
+                            <p class="zytz-p">12.<b>喜欢有序：</b>传统型人通常喜欢工作场所整洁、有序、规范。</p>
+                            <p class="zytz-p">13.<b>喜欢稳定：</b>传统型人通常喜欢稳定的工作环境、职业前景以及生活状态。</p>
+                        </div>
+                        <p class="pl-2  mb-5 sm:mb-10">
+                            传统型人通常喜欢有条理、有规律、需要一定技术和常识的工作。他们通常更为关注安全稳定、职业晋升机会、福利待遇等传统职业特征；他们勤奋、积极、按部就班、有组织和实际，通常适合需要遵循规范、程序和规则的工作；他们喜欢做具有技术含量、有明确规则和标准、可以保持稳定状态的工作，以及那些与数据处理、细节管理或日常业务逻辑有关的职业。
+                        </p>
+
+                        <p class="sm:mb-4 mb-1  text-00B3E8 font-semibold">【职业建议】</p>
+                        <p class="pl-2  mb-5 sm:mb-10">喜欢要求注意细节、精确度、有系统有条理，具有记录、归档、据特定要求或程序组织数据和文字信息的职业，并具备相应能力。</p>
+                        <p class="sm:mb-4 mb-1  text-00BB3E font-semibold">【适合职业】</p>
+                        <p class="pl-2 mb-5 sm:mb-5 text-shenblue">
+                            传统型（Conventional）的人偏好有明确的规则和流程，并能够在有序的环境中工作。因此，传统型人适合从事依靠规章制度和固定程序来完成工作任务的职业。具体而言，传统型人适合从事下列主要职业类型：
+                        </p>
+
+                        <div class="okjob-ul">
+                            <div class="okjob-li">
+                                <div class="okjob-title">行政办公类职业</div>
+                                <div class="okjob-p">
+                                    如行政办公、文书、秘书、档案管理、会计等职业。传统型人具有较强的组织和计划管理能力，能够以务实稳定的方式执行工作，能够胜任以保密、计划、安排、记录和数据分析为主的工作。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">商业金融类职业</div>
+                                <div class="okjob-p">
+                                    如保险、银行、投资、税务筹划等职业。传统型人对稳定的环境和规章制度较为敏感，具有较强的事实指导型思维，擅于处理复杂的、需要遵循规章制度的数据等信息。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">社会服务类职业</div>
+                                <div class="okjob-p">
+                                    如客房服务、酒店前台、企业招聘、社会调查、社会保障等职业。传统型人喜欢为公众服务，对事实咨询和公文撰写较为擅长，同时也重视以稳定和有序的方式执行服务工作，同时也在客观精确的社会调查中表现出色。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">技术类职业</div>
+                                <div class="okjob-p">
+                                    如电脑编程、网站开发、电子工程、质量控制、机械维修等职业。传统型人重视规则和程序，并擅于遵循制度实施安全、可靠的操作，具有较强的技术娴熟度和执行力。同时这些职业还能够满足传统型人对于逻辑分析和技术问题的追求。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">统计类职业</div>
+                                <div class="okjob-p">
+                                    如市场调查、数据分析、研究员等职业。传统型人有较强的数据分析能力，并擅长在数据分析的过程中遵循正确的流程，准确地分析数据和信息，同时在电脑和信息科学方面有一定的专业知识。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">教务类职业</div>
+                                <div class="okjob-p">
+                                    如教育行政、校对、图书馆管理员等职业。传统型人尊重规章制度，善于执行有序的教育事务，同时也能够认真细致地管理和组织，能够对课程、教材和学生信息进行准确分析。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">法律行业</div>
+                                <div class="okjob-p">
+                                    如律师、法官、公证员、专利代理等职业。传统型人善于在法律体系下的有序安排中工作，具有对规章制度的尊重感和敬畏。这种职业还需要传统型人具备敏锐的财务学和法学知识。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">工程师类职业</div>
+                                <div class="okjob-p">
+                                    如制造、建筑、土木或电气工程师等职业。传统型人擅长具体的设计、制造、建造和调试工作，善于按照规则进行独立计算和操作，能够正确地实施工作并保持工作安全。</div>
+                            </div>
+                        </div>
+
+                        <p class="pl-2 mb-5 sm:mb-16">
+                            传统型人在具有计划性和执行力，踏实细致等特点的同时，适合选择能够发挥组织、管理、事务处理和计算能力的职业。但需要注意的是，以上列举的职业类型并不是绝对适合传统型人从事的职业，每个人的个人情况和兴趣爱好不同，还需要针对个人的兴趣、技能、个性等方面综合考虑选择适合自己的职业类型。
+                        </p>
+                        <p class="sm:mb-4 mb-1  text-00BB3E font-semibold">【专业选择】</p>
+                        <p class="pl-2 sm:mb-16 mb-5">
+                            传统型（Conventional）：喜欢组织、整理和执行规则的工作，以及偏好有序、系统性的工作。适合的大学专业包括会计学、工程学、信息技术、图书馆学、计算机科学、行政管理、统计学、数学、法律、数据分析等。
+                        </p>
+                        <div class="zytz">
+                            <p class="zytz-p">1、 <b>会计与金融类：</b>会计学、金融学、财务管理等。</p>
+                            <p class="zytz-p">2、 <b>经济与商务类：</b>经济学、商务管理、市场营销等。</p>
+                            <p class="zytz-p">3、 <b>法律与法务类：</b>法学、法律事务、法律执行等。</p>
+                            <p class="zytz-p">4、 <b>行政与公共管理类：</b>行政管理、公共管理、政治学等。</p>
+                            <p class="zytz-p">5、 <b>统计与数据分析类：</b>统计学、数据分析、市场研究等。</p>
+                            <p class="zytz-p">6、 <b>物流与供应链管理类：</b>物流管理、供应链管理、运营管理等。</p>
+                            <p class="zytz-p">7、 <b>人力资源管理类：</b>人力资源管理、劳动关系等。</p>
+                            <p class="zytz-p">8、 <b>计算机科学与信息技术类：</b>计算机科学、软件工程、信息系统等。</p>
+                            <p class="zytz-p">9、 <b>工商管理类：</b>工商管理、企业管理、战略管理等。</p>
+                            <p class="zytz-p">10、<b>市场调研与市场分析类：</b>市场调研、市场分析、市场策划等。</p>
+                            <p class="zytz-p">11、<b>项目管理类：</b>项目管理、项目协调、项目评估等。</p>
+                            <p class="zytz-p">12、<b>国际贸易与商务类：</b>国际贸易、国际商务、国际市场等。</p>
+                            <p class="zytz-p">13、<b>运营管理与生产管理类：</b>运营管理、生产管理、质量管理等。</p>
+                            <p class="zytz-p">14、<b>酒店与旅游管理类：</b>酒店管理、旅游管理、餐饮管理等。</p>
+                            <p class="zytz-p">15、<b>建筑与房地产类：</b>建筑学、房地产开发与管理、房地产经济与法等。</p>
+
+                        </div>
+                        <p class="sm:mb-4 mb-1  text-F36161 font-semibold">【注意事项】</p>
+                        <p class="pl-2 sm:mb-16 mb-5">传统型的人做事有耐心、细致；如果C值弱的人，通常表现做事较为粗心，容易丢三落四，不够踏实。</p>
+                    </div>
+
+                    <div class="nA leading-8 sm:text-xl text-mblack sm:leading-10    border-b border-DDD ">
+                        <div
+                            class=" text-shenblue text-lg flex flex-wrap items-center font-semibold sm:text-2xl sm:mb-8 pl-2 my-5 sm:mt-16 sm:h-12 h-10 ">
+                            <div class="sm:w-8 sm:h-5 w-4 h-2.5 rounded-full bg-lgreen mr-2 sm:mr-2.5"></div>
+                            A：艺术型（Artistic）<span class="ranking"></span>
+                        </div>
+                        <p class="sm:mb-4 mb-1  text-org font-semibold">【性格特点】</p>
+                        <p class="pl-2  mb-5 sm:mb-5">
+                            有创造力，乐于创造新颖、与众不同的成果，渴望表现自己的个性，实现自身的价值。做事理想化，追求完美，不重实际。具有一定的艺术才能和个性。善于表达，怀旧，心态较为复杂。</p>
+                        <p class="pl-2  mb-5 sm:mb-10">有创造性，有想法，敏感，容易情绪化，有好奇心，有洞察力，有想象力，有时不服从指挥。</p>
+                        <p class="sm:mb-4 mb-1  text-827 font-semibold">【职业特质】</p>
+                        <p class="pl-2  mb-5 sm:mb-5 text-shenblue">艺术型（Artistic）的人典型职业特质：</p>
+                        <div class="zytz">
+                            <p class="zytz-p">1.<b>创造力：</b>艺术型人热爱创新和表达，他们非常善于自由创作和发挥想象力，倾向于将自己的感受、情感和独特的视角表现出来。</p>
+                            <p class="zytz-p">2.<b>敏感度：</b>艺术型人非常敏感，对色彩、音乐、艺术等方面的细微变化非常敏锐。他们倾向于通过自己的感官和直觉去理解和感受世界。</p>
+                            <p class="zytz-p">3.<b>表现性：</b>艺术型人希望通过自己的作品来表达自己的价值和个人风格，从而赢得他人的欣赏和认可。</p>
+                            <p class="zytz-p">4.<b>独立性：</b>艺术型人独立思考和行动，他们通常不喜欢受到太多约束和规定，更希望将自己的个性和特质融入到工作中。</p>
+                            <p class="zytz-p">5.<b>直觉性：</b>艺术型人擅长通过直觉和第六感来获取信息和灵感，通常不喜欢通过逻辑分析和推理来解决问题。</p>
+                            <p class="zytz-p">6.<b>好奇心：</b>艺术型人好奇心强，对各种事物都能产生兴趣，愿意尝试新的经验和挑战自己的创作能力。</p>
+                            <p class="zytz-p">
+                                7.<b>艺术感知：</b>艺术型人有着敏锐的艺术感知和对美的敏感度，他们重视视觉、声音和触觉上的艺术感受和体验，更有可能制作优美、饱满、有感染性的艺术作品。</p>
+                            <p class="zytz-p">8.<b>独立意识：</b>艺术型人通常不喜欢别人干预自己的创作，也不喜欢做机械性的工作任务，更多地关注于自我表现、个性呈现、思想交流等方面。
+                            </p>
+                            <p class="zytz-p">
+                                9.<b>文化洞察力：</b>艺术型人通常有卓越的文化背景和文学素养，重视了解人类文化与历史，喜欢探寻高层次的哲学和人性的探讨，具备超凡的感悟和快速理解复杂性概念的能力。
+                            </p>
+                            <p class="zytz-p">
+                                10.<b>创新思维：</b>艺术型人经常创造出新的美学理念和新颖的作品，擅长于将不同的元素进行整合创造出新的美学范式和表现形式，在工作和生活中，通常更容易产生极具洞见力的创新思想。
+                            </p>
+                        </div>
+                        <p class="pl-2  mb-5 sm:mb-10"> 艺术型人通常是具有创造力、敏感度、表现性和独立性的人，他们更适合选择具有创新和表现能力、允许自由发挥的工作。</p>
+
+
+                        <p class="sm:mb-4 mb-1  text-00B3E8 font-semibold">【职业建议】</p>
+                        <p class="pl-2  mb-5 sm:mb-10">
+                            喜欢的工作要求具备艺术修养、创造力、表达能力和直觉，并将其用于语言、行为、声音、颜色和形式的审美、思索和感受，具备相应的能力。不善于事务性工作。</p>
+                        <p class="sm:mb-4 mb-1  text-00BB3E font-semibold">【适合职业】</p>
+                        <p class="pl-2 sm:mb-5 mb-5 text-shenblue">艺术型（Artistic）的人适合的典型职业类型：</p>
+                        <div class="okjob-ul">
+                            <div class="okjob-li">
+                                <div class="okjob-title">艺术领域</div>
+                                <div class="okjob-p">
+                                    如绘画、摄影、音乐、电影、舞蹈、戏剧等创作性质的职业。艺术型人善于发挥自己的想象力和创作能力，将自己的内心情感和个性表达在创作中，例如画家、音乐家、导演、编剧、舞蹈家等。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">设计领域</div>
+                                <div class="okjob-p">
+                                    如平面、时尚、产品、房屋、家居空间等设计性质的职业。艺术型人擅长创新思维和表现技巧，能够将自己的独特思想与设计元素相结合，例如平面设计师、建筑设计师、时装设计师等。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">文化行业</div>
+                                <div class="okjob-p">
+                                    如案例研究、教育、历史、语言、哲学、音乐等职业。艺术型人有较强的文化感知能力和哲学思考能力，擅长将自己对人文历史和艺术美感的感悟融入到文化领域中，例如历史学家、人文学者、语言学家、音乐教育家等。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">传媒行业</div>
+                                <div class="okjob-p">
+                                    如广告、公共关系、新闻媒体、出版等职业。艺术型人具有创意和表现能力，在传媒行业中，可以将自己的创意和表达能力结合到媒体报道、公共关系策划、广告设计、音乐舞台设计等领域，例如广告创意总监、公共关系经理、编审、编导等。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">教育行业</div>
+                                <div class="okjob-p">
+                                    如音乐、美术、文学、戏剧、舞蹈等教育性质的职业。艺术型人天生善于创作和表现，同时也具备教育才能，可以将自己的艺术才华和教学能力相结合，例如教师、研究员、艺术辅导员等。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">社会服务行业</div>
+                                <div class="okjob-p">
+                                    如社工、志愿者、医疗行业等职业。艺术型人有着高度的敏感度和共情力，在社会服务行业中可以发挥自己的感性创造力，例如社工、临终关怀服务人员、儿童心理学家等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">家居装潢行业</div>
+                                <div class="okjob-p">
+                                    如室内装潢、花艺、家具设计、绿化空间设计等职业。艺术型人擅长将环境美感与生活理念结合在一起，可以在家居装潢行业中发挥出自己的创造力和实用性，例如室内设计师、室内装潢设计师等。
+                                </div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">大众文化行业</div>
+                                <div class="okjob-p">
+                                    如娱乐、旅游、体育等行业。艺术型人善于创造出有趣、富有感染力和文化内涵的内容，可以在大众文化行业中发挥自己的文化观点和才华，例如娱乐节目策划、旅游景区规划等。
+                                </div>
+                            </div>
+                        </div>
+                        <p class="pl-2 mb-5 sm:mb-16">总之，艺术型人在具有创新思维、独立性、情感表达能力和文化素养的同时，适合选择能够发挥创造力和艺术表现性的职业。</p>
+                        <p class="sm:mb-4 mb-1  text-00BB3E font-semibold">【专业选择】</p>
+                        <p class="pl-2 sm:mb-16 mb-5">
+                            艺术型（Artistic）：喜欢创意、表达、审美、艺术和文化领域的工作。适合的大学专业包括美术、音乐、戏剧与表演、艺术与设计、摄影、文学与创意写作、影视制作等。详细如下：</p>
+                        <div class="zytz">
+                            <p class="zytz-p">1、<b>艺术类专业：</b>如绘画、雕塑、版画、油画、中国画、书法、装饰艺术、环境艺术、艺术设计、服装设计、工业设计、视觉传达设计等。</p>
+                            <p class="zytz-p">2、<b>设计类专业：</b>如建筑设计、景观设计、室内设计、平面设计、产品设计、动画设计等。</p>
+                            <p class="zytz-p">3、<b>传媒类专业：</b>如广播电视编导、播音主持、影视表演、广告学、传播学、新闻学等。</p>
+                            <p class="zytz-p">4、<b>音乐类专业：</b>如音乐表演、音乐学、作曲与作曲技术理论、音乐治疗等。</p>
+                            <p class="zytz-p">5、<b>舞蹈类专业：</b>如舞蹈表演、舞蹈学、舞蹈编导等。</p>
+                            <p class="zytz-p">6、<b>戏剧与影视类专业：</b>如戏剧影视文学、戏剧影视导演、戏剧影视美术设计、影视摄影与制作等。</p>
+                            <p class="zytz-p">7、<b>美术学专业：</b>如美术学、美术教育、美术史论等。</p>
+
+                        </div>
+
+                        <p class="sm:mb-4 mb-1  text-F36161 font-semibold">【注意事项】</p>
+                        <p class="pl-2 sm:mb-16 mb-5">
+                            艺术兴趣高的人倾向于理想化，做事追求完美。在平常中，艺术型人在工作中讲究艺术，倾向于将事情做得漂亮、有美感、有情调、锦上添花，追求完美。每个人的兴趣和能力都是独特的，因此最好在选择专业时结合个人的实际情况和职业规划进行考虑。
+                        </p>
+                    </div>
+
+                    <div class="nE leading-8 sm:text-xl text-mblack sm:leading-10   border-b border-DDD">
+                        <div
+                            class=" text-shenblue text-lg flex flex-wrap items-center font-semibold sm:text-2xl sm:mb-8 pl-2 my-5 sm:mt-16 sm:h-12 h-10 ">
+                            <div class="sm:w-8 sm:h-5 w-4 h-2.5 rounded-full bg-lgreen mr-2 sm:mr-2.5"></div>
+                            E：企业型（Enterprise）<span class="ranking"></span>
+                        </div>
+                        <p class="sm:mb-4 mb-1  text-org font-semibold">【性格特点】</p>
+                        <p class="pl-2  mb-5 sm:mb-5">
+                            追求权力、权威和物质财富，具有领导才能。喜欢竞争、敢冒风险、有野心/抱负。为人务实，习惯以利益得失、权利、地位、金钱等来衡量做事的价值，做事有较强的目的性。</p>
+                        <p class="pl-2  mb-5 sm:mb-10">善辩、精力旺盛、独断、乐观、自信、好交际、机敏、有支配愿望。</p>
+                        <p class="sm:mb-4 mb-1  text-827 font-semibold">【职业特质】</p>
+                        <p class="pl-2  mb-5 sm:mb-5 text-shenblue">企业型（Enterprising）的人主要职业特质有以下几点：</p>
+                        <div class="zytz">
+                            <p class="zytz-p">1.<b>投资决策能力：</b>企业型人能够明确大局，做出适当的决策，并投资于与其兴趣相关的领域。</p>
+                            <p class="zytz-p">2.<b>领导能力：</b>企业型人善于指导他人，组织团队并提供激励，以实现个人和团队目标。</p>
+                            <p class="zytz-p">3.<b>谈判技巧：</b>企业型人擅长谈判和沟通，能够与他人达成共同目标，并妥善解决冲突。</p>
+                            <p class="zytz-p">4.<b>冒险精神：</b>企业型人喜欢冒险和探索新的领域，他们愿意冒险尝试新的想法和创新，以及面对风险和挑战。</p>
+                            <p class="zytz-p">5.<b>竞争意识：</b>企业型人有很强的竞争意识和成功的渴望，一旦面对困难，他们会全力以赴以取得成功。 </p>
+                            <p class="zytz-p">6.<b>销售技能：</b>企业型人擅长推销产品和思想，并能够让顾客信服。 </p>
+                            <p class="zytz-p">7.<b>注重自我价值：</b>企业型人知道自己的价值，并为此奋斗，这也正是他们在企业和商业世界中获得成功的一个原因。</p>
+                            <p class="zytz-p">8.<b>坚定以目标为导向：</b>企业型人通常具有坚定的目标和远见，他们努力工作，以实现长期目标和结果。</p>
+                            <p class="zytz-p">9.<b>情绪稳定性：</b>企业型人通常很自信，能够在压力下保持冷静，面对挑战和困难时保持积极的态度。</p>
+                            <p class="zytz-p">10.<b>创新性思维：</b>企业型人善于提出新的领域，创造新的机会，并利用创新性思维来推动企业发展。</p>
+                            <p class="zytz-p">11.<b>战略思维：</b>能够从全局角度考虑问题，制定出有针对性的解决方案。</p>
+                        </div>
+                        <p class="pl-2 mb-5 sm:mb-10">企业型人的职业特质是多方面的，他们通常具有领导能力、进取心、竞争意识和创新性思维等，这些特质使他们在商业和管理领域中有很高的成功率。
+                        </p>
+                        <p class="pl-2 mb-5 sm:mb-10">
+                            企业型人适合职业类型包括营销、销售、广告、管理、企业家、政治领导、公共关系等。需要注意的是，职业兴趣测评只是一种参考，最终的职业选择应该基于个人的兴趣、能力、价值观等因素进行综合考虑。
+                        </p>
+                        <p class="sm:mb-4 mb-1  text-00B3E8 font-semibold">【职业建议】</p>
+                        <p class="pl-2  mb-5 sm:mb-10">适合要求具备经营、管理、影响、监督和领导才能的岗位，以实现机构、政治／社会及经济目标的工作，并具备相应的能力。</p>
+                        <p class="sm:mb-4 mb-1  text-00BB3E font-semibold">【适合职业】</p>
+                        <p class="pl-2 sm:mb-5 mb-5 text-shenblue">企业型（Enterprising）的人适合职业类型主要包括以下几种：</p>
+                        <div class="okjob-ul">
+                            <div class="okjob-li">
+                                <div class="okjob-title">创业型职业</div>
+                                <div class="okjob-p">企业家、投资银行家、风险投资家、项目经理、营销策划专家等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">商业型职业</div>
+                                <div class="okjob-p">市场营销、销售代表、品牌管理、公关专员、销售经理、商务拓展经理等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">行政型职业</div>
+                                <div class="okjob-p">企业领袖、总裁、行政经理、行政主管、政治家、行政官员等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">竞争型职业</div>
+                                <div class="okjob-p">投资顾问、证券经纪人、银行家、基金经理、私募股权投资顾问等。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">管理型职业</div>
+                                <div class="okjob-p">团队经理、项目经理、人力资源总监、战略规划经理、供应链管理人员等中高级管理岗位。</div>
+                            </div>
+                            <div class="okjob-li">
+                                <div class="okjob-title">金融服务职业</div>
+                                <div class="okjob-p">银行经理、投资银行家、信贷分析师、财务分析师、保险经纪人、理财顾问等。</div>
+                            </div>
+                        </div>
+
+                        <p class="pl-2 mb-5 sm:mb-16">
+                            企业型（Enterprising）的人通常富有冒险精神、创新思维以及成就动机，偏好领导、冒险、励志等类型的职业，并且对于比较独立、具有挑战性的职业比较感兴趣。这些职业类型需要领导才能、与他人协作能力、竞争激情以及商业技能等特质，所以企业型人才能够在这些领域中发挥出色的表现。
+                        </p>
+                        <p class="sm:mb-4 mb-1  text-00BB3E font-semibold">【专业选择】</p>
+                        <p class="pl-2 sm:mb-16 mb-5">
+                            企业型（Enterprising）：喜欢领导、组织、销售、商业和管理方面的工作。适合的大学专业包括工商管理、市场营销、金融、管理学、企业管理、商务管理、国际关系、创业管理等。</p>
+                        <p class="sm:mb-4 mb-1  text-F36161 font-semibold">【注意事项】</p>
+                        <p class="pl-2 sm:mb-16 mb-5">
+                            工作中通常要求管理人员和销售人员具备较强的企业兴趣，E值高的人做事目的性强、务实，推动性也较强，E值低的人则做事的推动性较弱，速度较慢。然而，个人的兴趣、能力和未来职业目标也应该作为选择专业的重要考虑因素。
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="text-sm  sm:text-base pt-16 text-center text-999 ">
+                ©2023-2026 石立方高考志愿版权所有 <span class=" hidden sm:inline">（图文代码及试题禁止复制转载）</span>
+            </div>           
+        </div>
+
+        <script src="/js/vue.min.js"></script>
+        <script src="./js/echarts.min.js"></script>
+       
+        <script src="./js/hldresult.js"></script>
+        <script>
+            const img = new Image();
+            let vwidth = document.documentElement.clientWidth;
+            if (vwidth > 500) {
+                img.src = "./img/cavanabg1.png";
+            } else {
+                img.src = "./img/mcavanabg1.png";
+            }
+
+            window.onload = function () {
+
+                const canvas = document.getElementById("myCanvas");
+                var ctx = canvas.getContext('2d');
+
+                if (vwidth > 500) {
+                    canvas.width = 780;
+                    canvas.height = 780;
+                } else {
+                    canvas.width = 320;
+                    canvas.height = 320;
+                }
+                var dpr = window.devicePixelRatio || window.webkitDevicePixelRatio || window.mozDevicePixelRatio || 1;
+                var oldWidth = canvas.width;
+                var oldHeight = canvas.height;
+                canvas.width = Math.round(oldWidth * dpr);
+                canvas.height = Math.round(oldHeight * dpr);
+                canvas.style.width = oldWidth + 'px';
+                canvas.style.height = oldHeight + 'px';
+
+                ctx.strokeStyle = "#345F63";
+                ctx.fillStyle = "#EE5044";
+
+                if (vwidth > 500) {
+                    ctx.lineWidth = 3 * dpr;
+                    ctx.font = `bold ${24 * dpr}px Arial`;
+                } else {
+                    ctx.lineWidth = 1 * dpr;
+                    ctx.font = `bold ${18 * dpr}px  Arial`;
+                }
+
+                const centerX = canvas.width * 1 / dpr / 2;
+                const centerY = canvas.height * 1 / dpr / 2;
+
+
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.width);
+
+                // 六边形角距离中间的距离
+                if (vwidth > 500) {
+                    var radius = canvas.clientWidth * 0.35;
+                } else {
+                    var radius = canvas.clientWidth * 0.37;
+                }
+                // 六个数值  ASECRI
+
+                var Nums = [chart1vul4, chart1vul1, chart1vul5, chart1vul6, chart1vul2, chart1vul3];
+                var values = Nums;
+                // 绘制六边形能力图
+                ctx.beginPath();
+                for (var i = 0; i < 6; i++) {
+                    var x
+                    var y
+                    var value = values[i];
+                    var num = Nums[i];
+                    switch (i) {
+                        case 0:
+                            x = (centerX + radius * value / 100 * Math.cos((60 / 180) * Math.PI)) * dpr;
+                            y = (centerY - radius * value / 100 * Math.sin((60 / 180) * Math.PI)) * dpr;
+                            ctx.fillText(num, x + 10, y);
+                            break;
+                        case 1:
+                            x = (centerX + radius * value / 100 * Math.cos(0)) * dpr;
+                            y = (centerY) * dpr;
+                            ctx.fillText(num, x + 10, y);
+                            break;
+                        case 2:
+                            x = (centerX + radius * value / 100 * Math.cos((60 / 180) * Math.PI)) * dpr;
+                            y = (centerY + radius * value / 100 * Math.sin((60 / 180) * Math.PI)) * dpr;
+                            ctx.fillText(num, x + 10, y + 10);
+                            break;
+                        case 3:
+                            x = (centerX - radius * value / 100 * Math.cos((60 / 180) * Math.PI)) * dpr;
+                            y = (centerY + radius * value / 100 * Math.sin((60 / 180) * Math.PI)) * dpr;
+                            ctx.fillText(num, x + 10, y + 20);
+                            break;
+                        case 4:
+                            x = (centerX - radius * value / 100 * Math.cos(0)) * dpr;
+                            y = (centerY) * dpr;
+                            ctx.fillText(num, x + 10, y + 10);
+                            break;
+                        case 5:
+                            x = (centerX - radius * value / 100 * Math.cos((60 / 180) * Math.PI)) * dpr;
+                            y = (centerY - radius * value / 100 * Math.sin((60 / 180) * Math.PI)) * dpr;
+                            ctx.fillText(num, x + 10, y - 10);
+                            break;
+                        default:
+                            break;
+                    }
+                    // console.log(x,y);
+
+                    if (i == 0) {
+                        ctx.moveTo(x, y);
+                    } else {
+                        ctx.lineTo(x, y);
+                    }
+
+
+                }
+                ctx.closePath();
+                ctx.stroke();
+                ctx.scale(1 / dpr, 1 / dpr);
+            }
+        </script>
+
+
+        <script>
+            new Vue({
+                el: '#result',
+                data() {
+                    return {
+                        pcnav: false,
+                        zhezhao: false,
+                        zoom: 1,
+                        hldCode: "",
+                        userName: "",
+                        age: 0,
+                        sex: "",
+                        province: "",
+                        education: ""
+                    }
+                },
+                methods: {
+                    iftanchang() {
+                        this.$refs.pcnav.style.display = 'block'
+                        this.$refs.zhezhao.style.display = 'block'
+
+                    },
+                    myclose() {
+                        this.$refs.zhezhao.style.display = 'none'
+                        this.$refs.pcnav.style.display = 'none'
+                    },
+                    fenxiang(i) {
+                        let devicewidth1 = document.documentElement.clientWidth;
+
+                        if (devicewidth1 < 500) {
+                            window.location.href = './mshape-hld.html'
+                            this.$refs.iffenxiang.style.display = 'none'
+                        } else {
+                            this.$refs.iffenxiang.style.display = 'block'
+                            this.$refs.ifjianyi.style.display = 'none'
+                        }
+                    },
+
+                    jianyi(i) {
+                        let devicewidth1 = document.documentElement.clientWidth;
+                        if (devicewidth1 < 500) {
+                            window.location.href = './mjianyi.html'
+                            this.$refs.ifjianyi.style.display = 'none'
+                        } else {
+                            this.$refs.ifjianyi.style.display = 'block'
+                            this.$refs.iffenxiang.style.display = 'none'
+                        }
+                    },
+                    myclose2(data) {
+                        switch (data) {
+                            case 1:
+                                this.$refs.iffenxiang.style.display = 'none'
+                                break;
+                            case 2:
+                                this.$refs.ifjianyi.style.display = 'none'
+                                break;
+                            default:
+                                break;
+                        }
+                    },
+                },
+                mounted() {
+                    let bodyzoom = document.body.style.zoom;
+
+                    if (bodyzoom < 1) {
+
+                        this.zoom = 1 / document.body.style.zoom;
+                        window.addEventListener('resize', () => {
+                            this.zoom = 1 / document.body.style.zoom;
+                        })
+                    }
+
+                    function getCookie(key) {
+                        if (document.cookie.indexOf(key) < 0) { return; }
+                        var cookies = document.cookie.split(";");
+                        for (var i = 0; i < cookies.length; i++) {
+                            var temp = cookies[i].split("=");
+                            if (temp[0].replace(/\s/g, '') == key) {
+                                return decodeURIComponent(temp[1]);
+                            }
+                        }
+                    }
+
+
+
+                  
+                    if (!getCookie("hldSort")) {
+                        console.log("cookie err");
+                      //  alert("什么䅋东西")
+                         window.location.href = './hldcs.html'
+                    }
+
+                    //从cookie里取出排序 ["R", "C", "I", "A", "S", "E"]
+                    let ifget = JSON.parse(getCookie("hldSort")) || ''
+
+                    if (ifget) {
+                        let sort = ifget
+                        sort.forEach((item, index) => {
+                            document.querySelectorAll('.n' + item).forEach((it) => {
+                                it.style.order = index + 1
+                                it.classList.add(`order${index + 1}`)
+
+                                if (it.style.order < 4) {
+                                    document.querySelector('.hld-rebg' + it.style.order).innerHTML = item
+
+                                }
+
+                            })
+                        })
+                    }
+                    this.hldCode = document.querySelector('.hld-rebg1').innerHTML + document.querySelector('.hld-rebg2').innerHTML + document.querySelector('.hld-rebg3').innerHTML
+                    this.age = getCookie("age")
+                    this.userName = getCookie("hldusername")
+                    // this.education = getCookie("education")
+                    // this.province = getCookie("province")
+                    // this.sex = getCookie("sex")
+                    document.querySelector('.order6').classList.remove('border-b')
+                    document.querySelector('.order1').querySelector('.ranking').innerHTML = '（分值最高）'
+                    document.querySelector('.order2').querySelector('.ranking').innerHTML = '（分值次高）'
+                    document.querySelector('.order3').querySelector('.ranking').innerHTML = '（分值第三）'
+                    document.querySelector('.order6').querySelector('.ranking').innerHTML = '（分值最低）'
+                    document.querySelector('.order4').style.display = 'none'
+                    document.querySelector('.order5').style.display = 'none'
+
+                },
+            })
+        </script>
+
+
+</body>
+
+
+
+</html>

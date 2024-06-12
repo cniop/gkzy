@@ -1,0 +1,183 @@
+.bfbg{
+  background: #18A8D2;
+  font-size: 1.875rem;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  line-height: 2.5rem;
+  color: #FFFFFF;
+  /* height: 80px; */
+  padding: 60px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.bfbg span{
+  text-align: left;
+}
+
+.bfcs-title{
+  font-size: 2rem;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 2.75rem;
+  color: #474D6C;
+  text-align: center;
+  margin-top: 46px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.bfcs-title span{
+  text-align: left;
+}
+
+
+.bfselectbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.yuan{
+  width: 100px;
+  height: 100px;
+  background: #FFFFFF;
+  /* border: 3px solid #5AB221; */
+  border: 2px solid #92CEDF;
+  border-radius: 50%;
+  /* margin-bottom: 20px; */
+  margin: 0 auto 20px;
+}
+
+.yuan1{
+  /* border: 2px solid #E69337; */
+  border: 2px solid #92CEDF;
+}
+
+.yuan2{
+  width: 80px;
+  height: 80px;
+  /* border: 2px solid #E69337; */
+  border: 2px solid #92CEDF;
+}
+
+.y1bg{
+  /* background: #5AB221; */
+  background: #18A8D2;
+  border: 2px solid #18A8D2 !important;
+
+}
+
+.y2bg{
+  /* background: #E69337; */
+  background: #18A8D2;
+  border: 2px solid #18A8D2 !important;
+
+}
+
+.y3bg{
+  /* background: #A4A4A4; */
+  background: #18A8D2;
+  border: 2px solid #18A8D2 !important;
+
+}
+
+.yuan3{
+  width: 60px;
+  height: 60px;
+  /* border: 3px solid #A4A4A4; */
+  border: 2px solid #92CEDF;
+  margin: 0 auto 20px;
+}
+
+.yuan4{
+  width: 80px;
+  height: 80px;
+  /* border: 3px solid #5AB221; */
+  border: 2px solid #92CEDF;
+}
+
+.bfselecttext{
+  font-size: 1.25rem;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #555555;
+}
+
+.bfzyheight{
+  height: 100vh;
+}
+
+@media (min-width:500px) {
+  .bfbgheight{
+    height: 33rem;
+  }
+
+  .bfzyheight{
+    height: 47rem;
+  }
+}
+
+@media (max-width:1200px) {
+  .bfcs-title{
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin: 20px 0px;
+    justify-content: start;
+  }
+}
+
+@media (max-width:500px){
+  .bfcs-title{
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+
+  .bfbg{
+    font-size: 1.125rem;
+    font-family: Source Han Sans CN;
+    font-weight: bold;
+    line-height: 1.875rem;
+    padding: 25px 16px;
+  }
+
+  .yuan{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin: 0 auto 10px;
+  }
+  
+  .yuan2{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 10px;
+  }
+
+  .yuan3{
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 10px;
+  }
+  
+  .yuan4{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 10px;
+  }
+
+  .bfselecttext{
+    font-size: 0.875rem;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    color: #555555;
+  }
+
+  
+}

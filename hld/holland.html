@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>霍兰德职业兴趣测试2023专业版-Holland大学生SDS职业倾向测评免费-石立方高考志愿</title>
+    <meta name="description" content="霍兰德认为人的人格类型、兴趣与职业密切相关，兴趣是人们活动的巨大动力，凡是具有职业兴趣的职业，都可以提高人们的积极性" />
+    <meta name="keywords" content="霍兰德职业兴趣测试2023专业版,SDS职业倾向测评" />
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/change.css">
+    <link rel="stylesheet" href="./css/hometop.css">
+    <script src="/js/nocopy.js"></script> 
+</head>
+
+<body>
+    <div id="home" style="letter-spacing: 1px;">
+        <div ref="zhezhao" class="cursor-pointer z-10 w-full h-full fixed top-0 left-0 hidden"
+            style="background: rgba(0,0,0,0.1);" @click="myclose()" @touchmove.prevent></div>
+
+        <div class="hidden  sm:block  bg-cover bg-center relative">
+            <div class=" hidden sm:block">
+                <div style="background: url('./img/home-bg.jpg'); background-size: 100% 100%;padding: 20.83% 50%;">
+                </div>
+            </div>
+
+            <div class="w-full absolute top-0 left-0">
+
+                <div class="hidden container mx-auto  sm:flex justify-between items-center pt-8 pb-6">
+                    <img src="./img/m-hm-logo.png" alt="logo" class="sm:w-24  xl:w-32">
+
+                    <div class="flex justify-between items-center text-xs sm:text-xs md:text-sm xl:text-lg mypcnav">
+                        <a href="#"
+                            class="text-white xl:mx-4 mr-1 px-2 opacity-80 hover:opacity-100 whitespace-nowrap">霍兰德测试</a>
+
+                        <a href="/mbti/"
+                            class="text-white xl:mx-4 mr-1 px-2 opacity-80 hover:opacity-100 whitespace-nowrap">MBTI性格测试</a>
+                 
+                    </div>
+                    <!-- <a href="http://gkabc.top" class="qybbtn">
+                        <img src="./img/qyblogo.gif" alt="">
+                    </a> -->
+                </div>
+
+
+                <div class="container mx-auto sm:py-1 lg:py-20  xl:py-28">
+                    <div class="sm:w-5 sm:h-2.5 lg:w-10 lg:h-5 bg-white rounded-2xl sm:mb-2  lg:mb-10"></div>
+                    <div class="sm:text-lg lg:text-4xl text-white mb-7">
+                        <h1>霍兰德职业兴趣测试</h1>
+                    </div>
+                    <div class="sm:w-1/2 lg:w-44% text-white text-sm lg:text-xl lg:leading-loose">
+                        约翰·
+                        霍兰德认为人的人格类型、兴趣与职业密切相关，兴趣是人们活动的巨大动力，凡是具有职业兴趣的职业，都可以提高人们的积极性，促使人们积极地、愉快地从事该职业，且职业兴趣与人格之间存在很高的相关性。
+                    </div>
+                </div>
+            </div>
+
+            <div class=" w-full absolute bottom-0 left-0" style="background: rgba(0, 19, 124, 0.5900);">
+                <div ref="mfbox" class="container mx-auto " id="tcbox">
+                    <div class="container mx-auto hidden sm:flex text-xs xl:text-lg  xl:pr-0  
+                     text-yellow-300    rounded   items-center py-2 right-0">
+                        <img src="./img/m-hm-laba2.png" alt="" class=" w-7 h-7 ml-3 mr-2 ">
+                        科学评测，充分认识自己了解自己
+                        <div class=" absolute top-1 right-1">
+                            <img src="./img/m-hm-close.png" alt="" class=" w-3 h-3 cursor-pointer"
+                                @click="theclose2()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+       
+
+        <nav class="sm:hidden mx-3  navboxp2">
+
+            <div class="navbox">
+                <a href="holland.html" class="navactive">霍兰德测试</a>
+                <a href="/mbti/" class="ain1">MBTI测试</a>
+                <!-- <a href="/" class="ain2">智商测试</a>
+                <a href="more.html">更多</a> -->
+            </div>
+        </nav>
+
+        <div class="  pb-6 mx-3 sm:border-none pt-5  text-mblack sm:pt-0">
+            <img src="./img/sld-logo.png" alt="" class="sm:hidden  w-full  mx-auto">
+
+            <div class=" sm:container mx-auto">
+
+                <div class="sm:hidden mt-5 leading-7 text-sm text-555">
+                    <span class="  text-skyblue font-semibold sm:block sm:text-38 sm:mb-8 sm:text-mblack">测评介绍:</span>
+                    约翰· 霍兰德认为人的人格类型、兴趣与职业密切相关，兴趣是人们活动的巨大动力，凡是具有职业兴趣的职业，都可以提高人们的积极性，促使人们积极地、愉快地从事该职业，且职业兴趣与人格之间存在很高的相关性。
+                </div>
+
+               <div class="relative sm:hidden">
+                    <div
+                    class="bg-white text-hublue text-xs sm:text-base sm:text-mblack flex items-center justify-center mt-10 ">
+
+                    <label for="ifagree" class=" relative mr-1 sm:mr-0">
+                        <input type="text" name="agree" id="ifagree" class=" absolute hidden " value="no">
+                        <div class="hm-btn w-3.5 h-3.5 sm:w-22px sm:h-22px border-2  sm:mr-4 cursor-pointer  border-skyblue"
+                            @click="ifagreen()"></div>
+
+                        <img src="./img/m-hm-gxicon22.png"
+                            class="hm-btn h-3.5  sm:h-22px sm:mr-4 absolute  top-0 left-0 z-10 cursor-pointer"
+                            
+                            v-show="agreen == 'yes'" @click="ifagreen2()">
+
+                    </label>
+
+                    我已阅读并同意 <a href="/yhxx.html">《用户协议》</a> 与 <a href="/yszc.html">《隐私政策》</a>
+                </div>
+
+                <a @click="iftest()" class="cursor-pointer mt-5 sm:w-510px sm:py-5 block w-4/5 py-3 text-center
+                   bg-skyblue mx-auto text-22 sm:text-38 text-white font-semibold mb-10 sm:mb-36">
+                    进入测试系统
+                </a>
+
+                <div id="iferr1" class="hidden text-white p-3  absolute -top-20  left-1/2 -translate-x-1/2"
+                    style=" background:rgba(0,0,0,0.3)">请阅读并同意用户协议与隐私政策</div>
+                </div> 
+
+                <div class=" mt-11 sm:mt-24  ">
+                    <p class=" text-22 font-semibold sm:text-38 sm:mb-12 mb-4 sm:text-center">人格的六种类型</p>
+
+                    <div class=" sm:grid sm:grid-cols-2 lg:grid-cols-3  sm:gap-x-12 flex-wrap">
+                        <div class="  sm:mb-12 mb-8">
+                            <div class=" border-b-2 border-linegreen flex items-start">
+                                <div
+                                    class="text-lg w-6 h-6 sm:w-10 sm:h-10 bg-lgreen text-white flex justify-center items-center sm:text-3xl -mb-px">
+                                    1</div>
+                                <div
+                                    class="text-skyblue sm:text-2xl lg:text-2xl sm:ml-5 text-lg ml-2 font-semibold leading-none">
+                                    现实型（Realistic）</div>
+                            </div>
+                            <p class="mt-5 text-shenblue sm:mt-6 sm:pl-14 sm:text-2xl font-semibold">共同特征：</p>
+                            <p class=" sm:pl-14 sm:text-xl sm:leading-9 sm:mt-4 mt-1 leading-7">
+                                愿意使用工具从事操作性工作，动手能力强，做事手脚灵活，动作协调。偏好于具体任务，不善言辞，做事保守，较为谦虚。</p>
+                        </div>
+                        <div class="  sm:mb-12 mb-8">
+                            <div class=" border-b-2 border-linegreen flex items-start">
+                                <div
+                                    class="text-lg w-6 h-6 sm:w-10 sm:h-10 bg-lgreen text-white flex justify-center items-center sm:text-3xl -mb-px">
+                                    2</div>
+                                <div
+                                    class="text-skyblue sm:text-2xl lg:text-2xl sm:ml-5 text-lg ml-2 font-semibold leading-none">
+                                    研究型（Investigative）</div>
+                            </div>
+                            <p class="mt-5 text-shenblue sm:mt-6 sm:pl-14 sm:text-2xl font-semibold">共同特征：</p>
+                            <p class=" sm:pl-14 sm:text-xl sm:leading-9 sm:mt-4 mt-1 leading-7">
+                                思想家而非实干家，抽象思维能力强，求知欲强，肯动脑，善思考，不愿动手。喜欢独立的和富有创造性的工作。</p>
+                        </div>
+                        <div class="  sm:mb-12 mb-8">
+                            <div class=" border-b-2 border-linegreen flex items-start">
+                                <div
+                                    class="text-lg w-6 h-6 sm:w-10 sm:h-10 bg-lgreen text-white flex justify-center items-center sm:text-3xl -mb-px">
+                                    3</div>
+                                <div
+                                    class="text-skyblue sm:text-2xl lg:text-2xl sm:ml-5 text-lg ml-2 font-semibold leading-none">
+                                    艺术型（Artistic）</div>
+                            </div>
+                            <p class="mt-5 text-shenblue sm:mt-6 sm:pl-14 sm:text-2xl font-semibold">共同特征：</p>
+                            <p class=" sm:pl-14 sm:text-xl sm:leading-9 sm:mt-4 mt-1 leading-7">
+                                有创造力，乐于创造新颖、与众不同的成果，渴望表现自己的个性，实现自身的价值。做事理想化，追求完美，不重实际。</p>
+                        </div>
+                        <div class="  sm:mb-12 mb-8">
+                            <div class=" border-b-2 border-linegreen flex items-start">
+                                <div
+                                    class="text-lg w-6 h-6 sm:w-10 sm:h-10 bg-lgreen text-white flex justify-center items-center sm:text-3xl -mb-px">
+                                    4</div>
+                                <div
+                                    class="text-skyblue sm:text-2xl lg:text-2xl sm:ml-5 text-lg ml-2 font-semibold leading-none">
+                                    社会型（Social）</div>
+                            </div>
+                            <p class="mt-5 text-shenblue sm:mt-6 sm:pl-14 sm:text-2xl font-semibold">共同特征：</p>
+                            <p class=" sm:pl-14 sm:text-xl sm:leading-9 sm:mt-4 mt-1 leading-7">
+                                喜欢与人交往、不断结交新的朋友、善言谈、愿意教导别人。喜欢关心社会问题、渴望发挥自己的社会作用。</p>
+                        </div>
+                        <div class="  sm:mb-12 mb-8">
+                            <div class=" border-b-2 border-linegreen flex items-start">
+                                <div
+                                    class="text-lg w-6 h-6 sm:w-10 sm:h-10 bg-lgreen text-white flex justify-center items-center sm:text-3xl -mb-px">
+                                    5</div>
+                                <div
+                                    class="text-skyblue sm:text-2xl lg:text-2xl sm:ml-5 text-lg ml-2 font-semibold leading-none">
+                                    企业型（Enterprise）</div>
+                            </div>
+                            <p class="mt-5 text-shenblue sm:mt-6 sm:pl-14 sm:text-2xl font-semibold">共同特征：</p>
+                            <p class=" sm:pl-14 sm:text-xl sm:leading-9 sm:mt-4 mt-1 leading-7">
+                                追求权力、权威和物质财富，具有领导才能。喜欢竞争、敢冒风险、有野心、抱负。</p>
+                        </div>
+                        <div class="  sm:mb-12 mb-8">
+                            <div class=" border-b-2 border-linegreen flex items-start">
+                                <div
+                                    class="text-lg w-6 h-6 sm:w-10 sm:h-10 bg-lgreen text-white flex justify-center items-center sm:text-3xl -mb-px">
+                                    6</div>
+                                <div
+                                    class="text-skyblue sm:text-2xl lg:text-2xl sm:ml-5 text-lg ml-2 font-semibold leading-none">
+                                    传统型（Conventional）</div>
+                            </div>
+                            <p class="mt-5 text-shenblue sm:mt-6 sm:pl-14 sm:text-2xl font-semibold">共同特征：</p>
+                            <p class=" sm:pl-14 sm:text-xl sm:leading-9 sm:mt-4 mt-1 leading-7">
+                                尊重权威和规章制度，喜欢按计划办事，细心、有条理，习惯接受他人的指挥和领导，自己不谋求领导职务。</p>
+                        </div>
+                    </div>
+
+                    <div class=" sm:flex justify-between items-center sm:pt-14">
+
+                        <div>
+                            <p class=" text-mblack font-semibold sm:text-2xl sm:mb-5 text-22 mb-3">
+                                测评目的
+                            </p>
+                            <p class=" text-555 sm:text-xl sm:leading-10 text-base leading-7 ">
+                                霍兰德职业兴趣测试可以帮助您了解自己的职业兴趣和能力特长，从而更加清楚自己的人格特征更适合从事哪方面的工作。霍兰德职业兴趣SDS测试适用于职场人择业参考；也适用于高中生明确自己的兴趣爱好，为大学的专业选择提供参考；也适用于大一、大二学生做专业方向的调整。
+                            </p>
+                        </div>
+                        <img src="./img/sld-img3.png" alt="" class="mt-2 sm:w-2/5  sm:ml-10 leading-7">
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="mx-3 sm:container sm:mx-auto sm:mt-20 mt-11">
+
+
+            <div class=" relative">
+                <div
+                    class="bg-white text-hublue text-xs sm:text-base sm:text-mblack flex items-center justify-center mt-20 ">
+
+                    <label for="ifagree" class=" relative mr-1 sm:mr-0">
+                        <input type="text" name="agree" id="ifagree" class=" absolute hidden " value="no">
+                        <div class="hm-btn w-3.5 h-3.5 sm:w-22px sm:h-22px border-2  sm:mr-4 cursor-pointer  border-skyblue"
+                            @click="ifagreen()"></div>
+
+                        <img src="./img/m-hm-gxicon22.png"
+                            class="hm-btn h-3.5  sm:h-22px sm:mr-4 absolute  top-0 left-0 z-10 cursor-pointer"
+                            v-show="agreen == 'yes'" @click="ifagreen2()">
+
+                    </label>
+
+                    <span @click="ifagreen()">我已阅读并同意</span> <a href="/yhxx.html">《用户协议》</a> 与 <a
+                        href="/yszc.html">《隐私政策》</a>
+                </div>
+
+                <a @click="iftest()" class="cursor-pointer mt-5 sm:w-510px sm:py-5 block w-4/5 py-3 text-center
+                   bg-skyblue mx-auto text-22 sm:text-38 text-white font-semibold mb-24 sm:mb-36">
+                    进入测试系统
+                </a>
+
+                <div id="iferr2" class="hidden text-white p-3  absolute -top-20  left-1/2 -translate-x-1/2"
+                    style=" background:rgba(0,0,0,0.3)">请阅读并同意用户协议与隐私政策</div>
+            </div>
+
+            <div class=" w-10 h-5 bg-lgreen rounded-full mb-9 hidden sm:block sm:mt-36"></div>
+            <div class=" sm:text-38 font-semibold sm:tracking-wider sm:mb-11 mb-9 text-xl text-mblack mt-24 sm:mt-0">
+                关于霍兰德职业兴趣测评
+            </div>
+
+            <div>
+                <div class="sm:flex sm:space-x-14 justify-between">
+                    <div class=" sm:w-47peg">
+                        <p class="text-555 sm:text-666 sm:text-2xl sm:leading-10 leading-7 sm:mb-10 mb-8">
+                            霍兰德职业兴趣自测(Self-Directed Search)是由美国约翰·霍普金斯大学心理学教授，美国职业指导专家霍兰德(John
+                            Holland)根据他本人大量的职业咨询经验及其职业类型理论编制的测评工具。
+                        </p>
+                        <p class="text-555 sm:text-666 sm:text-2xl sm:leading-10 leading-7 sm:mb-12 mb-8">
+                            霍兰德认为，个人职业兴趣特性与职业之间应有一种内在的对应关系。根据兴趣的不同，人格可分为<b
+                                class=" text-mblack">研究型（I）、艺术型（A）、社会型（S）、企业型（E）、传统型（C）、现实型（R）六个维度，</b>每个人的性格都是这六个维度的不同程度组合。
+                        </p>
+                    </div>
+                    <img src="./img/sld-img1.png" alt="" class="sm:mb-20 mb-10 sm:w-47peg">
+                </div>
+
+                <div class="sm:flex sm:space-x-14 justify-between">
+                    <p class="text-555 sm:text-666 sm:text-2xl sm:leading-10 leading-7 sm:mb-11 mb-8 sm:w-47peg">
+                        根据霍兰德的理论，个体的职业兴趣可以影响其对职业的满意程度，当个体所从事的职业和他的职业兴趣类型匹配时，个体的潜在能力可以得到最彻底的发挥，工作业绩也更加显著。
+                    </p>
+                    <p class="text-555 sm:text-666 sm:text-2xl sm:leading-10 leading-7 sm:mb-11 mb-8 sm:w-47peg">
+                        人们通常倾向选择与自我兴趣类型匹配的职业环境，如具有现实型兴趣的人希望在现实型的职业环境中工作，可以最好地发挥个人的潜能。但职业选择中，个体并非一定要选择与自己兴趣完全对应的职业环境。
+                    </p>
+                </div>
+
+                <div class="sm:flex  sm:flex-row-reverse justify-between">
+                    <div class=" sm:w-47peg">
+                        <p class="text-555 sm:text-666 sm:text-2xl sm:leading-10 leading-7 sm:mb-10 mb-8">
+                            一则因为个体本身常是多种兴趣类型的综合体，单一类型显著突出的情况不多，因此评价个体的兴趣类型时也时常以其在六大类型中得分居前三位的类型组合而成，组合时根据分数的高低依次排列字母，构成其兴趣组型，如
+                            RCA 、 AIS 等。
+                        </p>
+                        <p class="text-555 sm:text-666 sm:text-2xl sm:leading-10 leading-7 sm:mb-12 mb-8">
+                            二则因为影响职业选择的因素是多方面的，不完全依据兴趣类型，还要参照社会的职业需求及获得职业的现实可能性。因此，职业选择时会不断妥协，寻求与相邻职业环境、甚至相隔职业环境，在这种环境中，个体需要逐渐适应工作环境。但如果个体寻找的是相对的职业环境，意味着所进入的是与自我兴趣完全不同的职业环境，则我们工作起来可能难以适应，或者难以做到工作时觉得很快乐，相反，甚至可能会每天工作得很痛苦。
+                        </p>
+                    </div>
+                    <img src="./img/sld-img2.png" alt="" class="sm:mb-20 mb-10 sm:w-47peg ">
+                </div>
+
+            </div>
+
+            <div class=" sm:mt-28">
+                <div class="text-skyblue sm:text-3xl flex items-center sm:mb-6 mb-5 font-semibold text-lg">
+                    <span class="hidden sm:block sm:w-6 sm:h-2.5 bg-skyblue rounded-full mr-5"></span>
+                    霍兰德职业兴趣理论的价值分析
+                </div>
+                <p class="text-555 sm:text-666 sm:text-2xl sm:leading-50px leading-7 sm:mb-12 mb-8">
+                    霍兰德的职业兴趣理论主要从兴趣的角度出发来探索职业指导的问题。他明确提出了职业兴趣的人格观，使人们对职业兴趣的认识有了质的变化。霍兰德的职业兴趣理论反映了他长期专注于职业指导的实践经历，他把对职业环境的研究与对职业兴趣个体差异的研究有机地结合起来，而在霍兰德的职业兴趣类型理论提出之前，二者的研究是相对独立进行的。霍兰德以职业兴趣理论为基础，先后编制了职业偏好量表(VocatIonaI
+                    Preference lnventory)和自我导向搜寻表(Self-directed
+                    Search)两种职业兴趣量表，作为职业兴趣的测查工具，霍兰德力求为每种职业兴趣找出两种相匹配的职业能力。兴趣测试和能力测试的结合在职业指导和职业咨询的实际操作中起到了促进作用。
+                </p>
+            </div>
+
+            <div class=" sm:mt-28">
+                <div class="text-skyblue sm:text-3xl flex items-center sm:mb-6 mb-5 font-semibold text-lg">
+                    <span class="hidden sm:block sm:w-6 sm:h-2.5 bg-skyblue rounded-full mr-5"></span>
+                    霍兰德职业兴趣理论对于职业选择和职业成功价值分析
+                </div>
+                <p class="text-555 sm:text-666 sm:text-2xl sm:leading-50px leading-7 sm:mb-12 mb-14">
+                    职业兴趣是职业选择中最重要的因素，兴趣测验可以帮助个体明确自己的主观性向，从而能得到最适宜的活动情境，并给予最大的能力投入。根据霍兰德的理论，个体的职业兴趣可以影响其对职业的满意程度，当个体所从事的职业和他的职业兴趣类型匹配时，个体的潜在能力可以得到最彻底的发挥，工作业绩也更加显著。在职业兴趣测试的帮助下，个体可以清晰地了解自己的职业兴趣类型和在职业选择中的主观倾向，从而在纷繁的职业机会中找寻到最适合自己的职业，避免职业选择中的盲目行为。尤其是对于大学生和缺乏职业经验的人，霍兰德的职业兴趣理论可以帮助做好职业选择和职业设计，成功地进行职业调整，从整体上认识和发展自己的职业能力，职业兴趣也是职业成功的重要因素。
+                </p>
+            </div>
+
+            <div class="shapebox w-11/12 sm:w-420px fixed top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 border border-linegreen hidden"
+                ref="contactus">
+                <div class=" absolute top-2 right-2"> <img src="./img/m-sub-clo.png" alt=""
+                        class=" h-7 cursor-pointer" @click="myclose2()"></div>
+                <div class=" text-linegreen my-12 text-center text-3xl font-semibold">微信扫码，联系我们</div>
+                <div class=" w-64 h-64 mx-auto mb-12"><img src="./img/jianyi.png" class="w-full"></div>
+            </div>
+
+
+            <div class="text-sm sm:mt-24 text-999 sm:text-lg text-center">
+                ©2023-2026石立方高考志愿版权所有 <span class=" hidden sm:inline">（图文代码及试题禁止复制转载）</span>
+            </div>
+            <div class="text-sm sm:text-base mt-2 text-center text-999 pb-10">
+                <a href="/yhxx.html" class=" text-999 font-semibold">使用前必读 </a>
+                <span @click="contact()" class="inline cursor-pointer">联系我们</span>
+            </div>
+        </div>
+
+        <div class="togombti-bot">
+          
+            <a href="/mbti/" class="totest tombti" >
+               MBTI测试
+            </a>
+            <a href="hldcs.html" class="totest">
+                立即测试
+
+            </a>
+        </div>
+
+    </div>
+
+    <script src="/js/vue.min.js"></script>
+    <script src="./js/hometop.js"></script>  
+
+    <script>
+        new Vue({
+            el: '#home',
+            data() {
+                return {
+
+                    agreen: 'no',
+                    local: {
+                        get: function (key) {
+                            var val = window.localStorage.getItem(key);
+                            if (val == null) {
+                                return false;
+                            }
+                            return JSON.parse(val);
+                        },
+                        set: function (key, val) {
+                            window.localStorage.setItem(key, JSON.stringify(val));
+                            return true;
+                        },
+                        del: function (key) {
+                            window.localStorage.removeItem(key);
+                            return true;
+                        }
+                    },
+                    zoom: 1
+                }
+            },
+            methods: {
+                iftanchang() {
+                    this.$refs.pcnav.style.display = 'block'
+                    this.$refs.zhezhao.style.display = 'block'
+
+                },
+                myclose() {
+                    this.$refs.zhezhao.style.display = 'none'
+                    this.$refs.pcnav.style.display = 'none'
+                },
+                ifagreen() {
+                    this.agreen = 'yes'
+                    document.querySelector('#ifagree').value = 'yes'
+                },
+                ifagreen2() {
+                    this.agreen = 'no'
+                    document.querySelector('#ifagree').value = 'no'
+                },
+                iftest() {
+                    let d = document.querySelector('#ifagree')
+                    if (d.value == 'no') {
+                        //document.querySelector('#iferr1').style.display = 'inline-block'
+                        document.querySelector('#iferr2').style.display = 'inline-block'
+                        //setTimeout(() => { document.querySelector('#iferr1').style.display = 'none' }, 2000)
+                        setTimeout(() => { document.querySelector('#iferr2').style.display = 'none' }, 2000)
+                        return false
+                    } else {
+                        window.location.href = 'hldcs.html'
+                    }
+                },
+                mfclose() {
+                    this.$refs.mf.style.display = 'none'
+                },
+                contact() {
+                    this.$refs.contactus.style.display = 'block'
+                },
+                myclose2() {
+                    this.$refs.contactus.style.display = 'none'
+                },
+            },
+            mounted() {
+                this.local.set('hld-homedata', 'allow')
+
+
+                let bodyzoom = document.body.style.zoom;
+
+                if (bodyzoom < 1) {
+
+                    this.zoom = 1 / document.body.style.zoom;
+                    window.addEventListener('resize', () => {
+                        this.zoom = 1 / document.body.style.zoom;
+                    })
+                }
+            },
+        })
+
+        function theclose2() {
+            document.querySelector('#tcbox').style.display = 'none'
+        }
+
+        // let vW = document.documentElement.clientWidth; 
+        // if (vW < 500) {
+        //     let scale = vW / 375;
+        //     document.write(`<body style="zoom: ${scale}">`)
+        // }
+    </script>
+</body>
+
+</html>

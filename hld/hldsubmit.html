@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>霍兰德职业兴趣测试（提交信息）- 石立方高考志愿</title>
+
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/submit.css">
+
+</head>
+
+<body class="sm:bg-f5f">
+    <div id="submitpage">
+        <div ref="zhezhao" class="hidden cursor-pointer z-20 w-full h-full fixed top-0 left-0 "
+            style="background: rgba(0,0,0,0.1);" @click="myclose()" @touchmove.prevent></div>
+
+        <div class="w-full my-shadow ">
+            <div class="bg-white px-3 py-3 sm:pt-8 sm:pb-8  relative  h-12 sm:h-28 flex justify-between items-center">
+                <div class=" container mx-auto flex justify-between items-center">
+                    <div class=" flex items-center">
+                        <div class="z-20">
+                            <span class="relative">
+                                <img src="./img/m-cs-bz2.png" alt="" @click="iftanchang(2)" title="声明"
+                                    class="h-22px sm:h-9 inline-block mr-4 cursor-pointer block">
+                                <div class="w-72 sm:w-96 md:w-830px absolute  sm:-right-68px z-10 px-7 my-sm-bg-2
+                                md:px-20 pt-11 pb-5 sm:pb-11 text-555 sm:text-lg text-sm  zuosub-bg-1 top-3 sm:top-9 -left-5 sm:myleft hidden"
+                                    id="pcsm" ref="pcsm">
+                                    <p class="text-22 sm:text-4xl text-center font-semibold text-mblack sm:mb-8 mb-6">
+                                        声明(部分协议)
+                                    </p>
+                                    <p class=" sm:mb-6 mb-5">参与测评的用户需要接受以下条款，否则不要测评。</p>
+                                    <p class=" sm:mb-6 mb-5">1. 本站所有测评及产生的报告仅做个人参考，不做他用。</p>
+                                    <p class=" sm:mb-6 mb-5">2. 本站不对任何因测评报告产生的不良后果负责。</p>
+                                    <p class=" sm:mb-6 mb-5">3. 因测评环境及测评者对待测评的态度不同，测评可能产生较大偏差。</p>
+                                    <p class=" sm:mb-6 mb-5">4. 参与测评的用户可能在其他网站或APP等平台中得到不一样的报告。</p>
+                                    <p class=" sm:mb-6 mb-5">5. 心理承受力差者或者有心理疾病者，建议咨询专业心理医生，不要测评。</p>
+                                    <p class=" sm:mb-6 mb-5">6. 未成年人须征得家长允许和监督下进行测评。&nbsp;&nbsp;&nbsp;<a
+                                            href="/yhxx.html">查看<b>《用户协议全文》</b></a></p>
+                                </div>
+                            </span>
+                        </div>
+
+                    </div>
+
+
+
+                    <img src="./img/m-cs-logo.png" alt=" "
+                        class="sm:h-10  h-5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+
+
+                    <div class="flex items-center">
+                        <a href="./" class="xcxbtn">
+                            重新测试
+                        </a>
+
+                        <div class="relative z-20 ml-4">
+                            <img src="./img/m-cs-gd.png" alt="" @click='iftanchang(1)'
+                                class="w-22px h-22px sm:w-9 sm:h-9 cursor-pointer">
+
+                            <div class="w-36 sm:w-56 absolute  px-3 sm:px-6 sm:py-8 py-5 z-10 -right-1 top-6 sm:top-8 hidden"
+                                style="background: url('./img/navrightbg.png');background-size: 100% 100%;" id="pcnav"
+                                ref="pcnav">
+
+                                <a href="/mbti/"
+                                    class="text-base sm:text-xl block text-hublue p-2.5 pr-0  hover:bg-skyblue hover:text-white rounded">MBTI性格测试</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="sm:container mx-auto bg-white sm:mt-8 sm:pb-40 pb-20" id="mytextbox">
+            <div class=" mt-7 sm:pt-9 sm:pb-7  sm:sub-border">
+                <div class=" text-lg text-mblack font-semibold text-center sm:text-linegreen sm:text-4xl sm:mb-4 mb-1">
+                    恭喜您完成了本次测试</div>
+                <div class=" text-sm text-888  text-center sm:text-lg">（请填写以下信息，仅供生成报告不做他用）</div>
+            </div>
+
+            <form action="./baogao.html" method="get" name="form1" onsubmit="return checkUser();"
+                class="flex justify-between flex-wrap mt-10 mx-3 sm:text-2xl text-hublue sm:w-11/12 xl:w-3/5 sm:mx-auto">
+
+                <label for="myname"
+                    class="flex  w-50e sm:w-50esm bg-f5f sm:p-5 p-2.5 mb-5 rounded sm:rounded-lg sm:mb-9">
+                    <span class=" sm:text-2xl ">姓名：</span>
+                    <input type="text" name="myname" id="myname" maxlength="8"
+                        class="text-skyblue text-center sm:text-left  w-3/5 sm:w-2/3 bg-f5f sm:pl-11" v-model="myname">
+                </label>
+
+                <label for="sex"
+                    class="relative w-50e sm:w-50esm bg-f5f  mb-5 sm:mb-9 sm:rounded-lg rounded flex justify-between items-center">
+                    <span class=" sm:text-2xl absolute top-1/2 -translate-y-1/2 sm:left-5 left-2.5"
+                        style="pointer-events:none;">性别：</span>
+                    <select name="sex" type="text" id="sex" style="text-align: center;"
+                        class=" rounded px-2.5 pl-14 sm:px-5 cursor-pointer w-full h-full bg-f5f text-center text-skyblue"
+                        v-model="sex">
+                        <option :value="item" v-for="(item, index) in sexlist" :key="index"
+                            class="text-center  text-555">{{item}}</option>
+                    </select>
+                    <img src="./img/m-su-icon.png" alt=""
+                        class=" h-1.5 sm:h-3 align-middle inline-block absolute top-1/2 -translate-y-1/2 sm:right-5 right-2.5"
+                        style="pointer-events:none;">
+                </label>
+
+                <label for="mphone" class="relative text-org w-50e sm:w-50esm   mb-5 rounded sm:rounded-lg sm:mb-9 "
+                    style="display: none;">
+                    <span class="absolute  left-2 sm:text-2xl top-1/2 -translate-y-1/2  sm:left-5 sm:mt-0.5"
+                        ref="sjh">手机号：</span>
+                    <input type="text" name="mphone" ref="sjk" id="mphone" maxlength="11" placeholder="请输入手机号" class="text-org   w-full h-full sm:w-full border border-E78110 text-sm pl-16  sm:px-5 sm:py-4 sm:text-2xl
+                          sm:rounded-lg rounded sm:pl-28" v-model="mphone" oninput="value=value.replace(/[^0-9.]/g,'')"
+                        onfocus="placeholder=''" onblur="placeholder='请输入手机号'">
+                </label>
+
+                <label
+                    class="relative w-50e sm:w-50esm sm:text-center text-base text-org 
+                             bg-FFEEDB sm:p-2  mb-5 rounded sm:rounded-lg sm:mb-9 sm:text-2xl sm:flex items-center justify-center "
+                    style="display: none;">
+                    <p ref="clicksncode" class="w-full h-full flex items-center justify-center cursor-pointer p-2.5"
+                        @click="getsncode">获取查询码</p>
+                    <p class="hidden text-org text-lg py-2.5" ref="pcsncode">请记住查询码：<b
+                            class="text-F64A4A text-2xl">{{sncode}}</b>，以便查询报告</p>
+                    <div class=" flex justify-center items-center">
+                        <p class="hidden p-1.5 text-F64A4A text-center text-lg leading-8 font-semibold" ref="msncode2">
+                            {{sncode}}</p>
+                    </div>
+                    <input type="text" class="hidden" name="sncode" v-model="sncode" id="sncode">
+                    <p class="w-48 right-0 absolute -bottom-6 hidden text-right text-org  text-sm" ref="msncode">
+                        请记住查询码，以便查询报告</p>
+                </label>
+
+
+
+
+
+                <div id="iferror0"
+                    class=" hidden fixed p-2 top-1/3 sm:top-2/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white"
+                    style="background: rgba(0,0,0,0.5);">请不要输入不雅词</div>
+                <div id="iferror"
+                    class=" hidden fixed p-2 top-1/3 sm:top-2/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white"
+                    style="background: rgba(0,0,0,0.5);">姓名限中文2-4个字，英文3-8个字</div>
+                <div id="iferror2"
+                    class=" hidden fixed p-2 top-1/3 sm:top-2/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white"
+                    style="background: rgba(0,0,0,0.5);">请选择性别</div>
+
+                <div id="iferror9"
+                    class=" hidden fixed p-2 top-1/3 sm:top-2/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white"
+                    style="background: rgba(0,0,0,0.5);">请填入正确的手机号</div>
+                <div id="iferror10"
+                    class=" hidden fixed p-2 top-1/3 sm:top-2/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white"
+                    style="background: rgba(0,0,0,0.5);">请点击获取查询码按钮</div>
+
+
+                <!-- <input type="hidden" name="nR" ref="nR">
+                <input type="hidden" name="nI" ref="nI">
+                <input type="hidden" name="nA" ref="nA">
+                <input type="hidden" name="nS" ref="nS">
+                <input type="hidden" name="nE" ref="nE">
+                <input type="hidden" name="nC" ref="nC"> -->
+
+
+                <input type="submit" value="提交信息"
+                    class=" cursor-pointer mt-10 py-2 sm:w-72 w-1/2 mx-auto bg-skyblue text-white rounded text-lg block">
+            </form>
+        </div>
+
+        <div class="sm:container mx-auto bg-white sm:mt-8 sm:pb-40 pb-20 hidden sm:pt-5 mx-3 sm:mx-auto" id="tishi">
+
+            <div class="tishikuang">
+                <div class=" absolute top-2 right-2">
+                    <img src="./img/m-sub-clo.png" alt="" class=" h-7 cursor-pointer" @click="tskclose()">
+                </div>
+                <div class="ts-title ">提 示</div>
+                <div class="sub-t1">{{myname}}，您已提交本次测评</div>
+                <div class="sub-t1">请不要反复提交</div>
+                <div class="ts-btn" @click="tskclose()">确 定</div>
+            </div>
+
+        </div>
+
+        <div class="text-sm  text-999 sm:text-base text-center sm:mt-10 mt-5 pb-5">
+            ©2023-2026 石立方高考志愿版权所有 <span class=" hidden sm:inline">（图文代码及试题禁止复制转载）</span></div>
+    </div>
+   
+    <script src="/js/vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#submitpage',
+            data() {
+                return {
+                    sexlist: ['男', '女'],
+                    checklist: ['男', '女'],
+                    mycheckid: 0,
+                    mphone: '18888888888',
+                    ifbox: false,
+                    myname: '',
+                    sex: '',
+                    age: '',
+                    education: '',
+                    specialty: '',
+                    job: '',
+                    sncode: '0311',
+                    local: {
+                        get: function (key) {
+                            var val = window.localStorage.getItem(key);
+                            if (val == null) {
+                                return false;
+                            }
+                            return JSON.parse(val);
+                        },
+                        set: function (key, val) {
+                            window.localStorage.setItem(key, JSON.stringify(val));
+                            return true;
+                        },
+                        del: function (key) {
+                            window.localStorage.removeItem(key);
+                            return true;
+                        }
+                    },
+                    ifleft: false,
+                    ifright: false,
+
+                }
+            },
+            methods: {
+                myclose2(data) {
+                    switch (data) {
+                        case 1:
+                            this.$refs.iffenxiang.style.display = 'none'
+                            break;
+                        case 2:
+                            this.$refs.ifjianyi.style.display = 'none'
+                            break;
+                        default:
+                            break;
+                    }
+                },
+
+                iftanchang(data) {
+                    if (data == 1) {
+                        this.ifleft = !this.ifleft
+                        if (this.ifleft) {
+                            this.$refs.pcnav.style.display = 'block';
+                            this.$refs.zhezhao.style.display = 'block';
+                        } else {
+                            this.$refs.pcnav.style.display = 'none';
+                            this.$refs.zhezhao.style.display = 'none';
+                        }
+                    } else {
+                        this.ifright = !this.ifright
+                        if (this.ifright) {
+                            this.$refs.pcsm.style.display = 'block';
+                            this.$refs.zhezhao.style.display = 'block';
+                        } else {
+                            this.$refs.pcsm.style.display = 'none';
+                            this.$refs.zhezhao.style.display = 'none';
+                        }
+                    }
+                },
+                myclose() {
+                    this.$refs.zhezhao.style.display = 'none'
+                    this.$refs.pcnav.style.display = 'none'
+                    this.$refs.pcsm.style.display = 'none'
+
+                },
+                getsncode() {
+                    let mphone = "18888888888";//document.querySelector("#mphone").value
+                    let province = "北京";// document.querySelector("#sheng").value
+
+                    let ifphone
+
+                    if (province == '香港' || province == '台湾' || province == '澳门' || province == '其他') {
+                        ifphone = /^\d{8,11}$/.test(mphone)
+                    } else {
+                        ifphone = (/^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}$/).test(mphone)
+                    }
+
+                    if (!ifphone) {
+                        document.querySelector('#iferror9').style.display = 'block'
+                        setTimeout(() => {
+                            document.querySelector('#iferror9').style.display = 'none'
+                        }, 2000);
+                        return false
+                    }
+                    this.mphone = mphone
+
+                    let arr
+
+                    if (province == '香港' || province == '台湾' || province == '澳门' || province == '其他') {
+
+                        if (mphone.length == 8) {
+                            arr = [0, 4]
+                        } else if (mphone.length == 9) {
+                            arr = [0, 5]
+                        } else if (mphone.length == 10) {
+                            arr = [0, 6]
+                        } else if (mphone.length == 11) {
+                            arr = [0, 3, 7]
+                        }
+
+                    } else {
+                        arr = [0, 3, 7]
+                    }
+                    let index = Math.floor((Math.random() * arr.length));
+                    let num = arr[index]
+                    this.sncode = mphone.slice(num, num + 4)
+                    this.$refs.clicksncode.style.display = 'none'
+
+                    let devicewidth1 = document.documentElement.clientWidth;
+                    if (devicewidth1 > 500) {
+                        this.$refs.pcsncode.style.display = 'block'
+                    } else {
+                        this.$refs.msncode.style.display = 'block'
+                        this.$refs.msncode2.style.display = 'block'
+                    }
+
+                    this.$refs.sjk.style.borderColor = '#666666'
+                    this.$refs.sjh.style.color = '#666666'
+                    this.$refs.sjk.style.color = '#666666'
+                    this.$refs.sjk.readOnly = true
+                },
+                tskclose() {
+                    window.location.href = './index.html'
+                }
+            },
+            mounted() {
+                // this.$refs.nR.value = this.local.get('gkabc-hld-data').nR ? this.local.get('gkabc-hld-data').nR : 0
+                // this.$refs.nI.value = this.local.get('gkabc-hld-data').nI ? this.local.get('gkabc-hld-data').nI : 0
+                // this.$refs.nA.value = this.local.get('gkabc-hld-data').nA ? this.local.get('gkabc-hld-data').nA : 0
+                // this.$refs.nS.value = this.local.get('gkabc-hld-data').nS ? this.local.get('gkabc-hld-data').nS : 0
+                // this.$refs.nE.value = this.local.get('gkabc-hld-data').nE ? this.local.get('gkabc-hld-data').nE : 0
+                // this.$refs.nC.value = this.local.get('gkabc-hld-data').nC ? this.local.get('gkabc-hld-data').nC : 0
+
+                function getCookie(key) {
+                    if (document.cookie.indexOf(key) < 0) { return; }
+                    var cookies = document.cookie.split(";");
+                    for (var i = 0; i < cookies.length; i++) {
+                        var temp = cookies[i].split("=");
+                        if (temp[0].replace(/\s/g, '') == key) {
+                            return decodeURIComponent(temp[1]);
+                        }
+                    }
+                }
+               
+
+                if (getCookie('hldusername')) {
+                    document.querySelector('#mytextbox').style.display = 'none'
+                    document.querySelector('#tishi').style.display = 'block'
+                    this.myname = getCookie('hldusername')
+                }
+
+
+            },
+        })
+
+
+        function checkUser() {
+            let d = true;
+
+            let hanzizi1 = document.querySelector('#myname').value
+            let sex = document.querySelector("#sex").value
+            // let age = document.querySelector("#age").value
+            // let education = document.querySelector("#education").value
+            // let specialty = document.querySelector("#specialty").value
+            // let job = document.querySelector("#job").value
+
+            let sncode = document.querySelector("#sncode").value
+            // let province = document.form1.province1.value
+            // let city = document.form1.city1.value
+
+            let mphone = document.querySelector("#mphone").value
+            // let g = (/^([\u4e00-\u9fa5]{2,4})$/gi).test(hanzizi1);
+
+            function iferr(ele) {
+                document.querySelector(ele).style.display = 'block'
+                setTimeout(() => {
+                    document.querySelector(ele).style.display = 'none'
+                }, 2000);
+                d = false
+            }
+
+            let g = (/^[a-zA-Z\u4e00-\u9fa5]+$/g).test(hanzizi1);
+
+            //不雅词库
+            let keywords = ['猪', '狗', '草', '傻', '玛', '操', '艹', '妈', '奶', '骗', '逼', '屌', '吊', 'shit', 'fuck', 'fk',]
+
+            let len = 0
+            for (let i = 0; i < hanzizi1.length; i++) {
+                let c = hanzizi1.charCodeAt(i);
+                if ((c >= 0x0001 && c <= 0x007e) || (0xff60 <= c && c <= 0xff9f)) {
+                } else {
+                    len += 1;
+                }
+            }
+
+            if (len > 4) {
+                iferr('#iferror')
+                return false
+            }
+
+            if (hanzizi1.length < 3 && len < 2) {
+                iferr('#iferror')
+                return false
+            }
+
+            for (let i = 0; i < keywords.length; i++) {
+                if (hanzizi1.indexOf(keywords[i]) != -1) {
+                    iferr('#iferror0')
+                    return false
+                }
+            }
+
+            if (!g) {
+                iferr('#iferror')
+                return false
+            }
+
+            if (sex == '') {
+                iferr('#iferror2')
+                return false
+            }
+
+            // if (age == '') {
+            //     iferr('#iferror3')
+            //     return false
+            // }
+
+            // if (education == '') {
+            //     iferr('#iferror4')
+            //     return false
+            // }
+
+            // if (specialty == '') {
+            //     iferr('#iferror5')
+            //     return false
+            // }
+
+            // if (job == '') {
+            //     iferr('#iferror6')
+            //     return false
+            // }
+
+            // if (province == '' || city == '') {
+            //     iferr('#iferror7')
+            //     return false
+            // }
+
+            // let ifphone
+
+            // if (province == '香港' || province == '台湾' || province == '澳门' || province == '其他') {
+            //     ifphone = /^\d{8,11}$/.test(mphone)
+            // } else {
+            //     ifphone = (/^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}$/).test(mphone)
+            // }
+
+            // if (!ifphone) {
+            //     iferr('#iferror9')
+            //     return false
+            // }
+
+            if (!sncode) {
+                iferr('#iferror10')
+                return false
+            }
+
+
+
+            document.querySelector('#mytextbox').style.display = 'none'
+            document.querySelector('#tishi').style.display = 'block'
+            function setCookie(key, value) {
+                var cookie = key + '=' + encodeURIComponent(value);
+                document.cookie = cookie;
+            }
+
+            setCookie('hldusername', hanzizi1)
+            setCookie('sex', sex)
+            // setCookie('age',age)
+            // setCookie('education',education)
+            // setCookie('province',province+"-"+city)
+
+            return d
+        }
+
+
+
+    </script>
+</body>
+
+</html>

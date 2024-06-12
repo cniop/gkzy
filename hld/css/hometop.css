@@ -1,0 +1,59 @@
+.togochrbox{
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .togochrbox{
+        display: block;
+        position: relative;
+    }
+
+    .togochr{
+        width: 93.6%;
+        margin: 8px auto 0;
+        background: url('../img/hometopimg.png') no-repeat center center;
+        background-size: 100% 100%;
+    }
+
+    .togochrclose{
+        height: 10px;
+        position: absolute;
+        top: 6px;
+        right: 5%;
+        cursor: pointer;
+    }
+}
+
+.moreicon{
+    display: flex;
+    align-items: center;
+}
+
+.moreicon::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    margin-left: 8px;
+}
+
+.morebg2{
+    width: 140px;
+    height: 124px;  
+    background: url('../img/moreiconbg1.png') no-repeat;
+    background-size: 100% 100%;
+    padding: 34px 20px;
+    position: absolute;
+    left: -3px;
+    top: 28px;
+    color: #fff;
+    display: none;
+}
+
+.morebox:hover .morebg2 {
+    display: grid;
+    gap: 20px;
+}

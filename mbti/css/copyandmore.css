@@ -1,0 +1,418 @@
+.copyok {
+  display: none;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  font-size: 1.25rem;
+  white-space: nowrap;
+  z-index: 31;
+}
+
+.copyok2 {
+  display: none;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  font-size: 1.25rem;
+  white-space: nowrap;
+  z-index: 31;
+}
+
+.mphonebox {
+  /* width: 500px;
+  display: flex;
+  position: fixed;
+  bottom: 0; 
+  left: 50%;
+  transform: translateX(-50%); */
+  display: none;
+}
+
+.copyzz {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  width: 150%;
+  height: 150%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+.copymorebox {
+  display: none;
+  z-index: 30;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 520px;
+  height: 430px;
+  background: url('../img/copymoreboxbg.png') #fff no-repeat;
+  background-size: contain;
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.copymoreclose {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.copymoretitle {
+  font-size: 1.375rem;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  line-height: 2.1875rem;
+  color: #333333;
+  margin-top: 18px;
+  text-align: center;
+}
+
+.copymorep {
+  font-size: 1rem;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1.75rem;
+  color: #555555;
+  margin-top: 18px;
+}
+
+
+.copymorebtn1 {
+  width: 240px;
+  height: 48px;
+  background: linear-gradient(90deg, #80CD46 0%, #46CC23 100%);
+  opacity: 1;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 3rem;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 18px auto 0;
+  cursor: pointer;
+}
+
+.copyhengxian {
+  width: 100%;
+  height: 1px;
+  margin: 20px 0;
+  background-image: linear-gradient(to right, #999 50%, rgba(255, 255, 255, 0) 0%);
+  /* 35%è®¾ç½®è™šçº¿ç‚¹xè½´ä¸Šçš„é•¿åº¦ */
+  background-position: bottom;
+  /* topé…ç½®ä¸Šè¾¹æ¡†ä½ç½®çš„è™šçº¿ */
+  background-size: 9px 1px;
+  /* ç¬¬ä¸€ä¸ªå‚æ•°è®¾ç½®è™šçº¿ç‚¹çš„é—´è·ï¼›ç¬¬äºŒä¸ªå‚æ•°è®¾ç½®è™šçº¿ç‚¹yè½´ä¸Šçš„é•¿åº¦ */
+  background-repeat: repeat-x;
+
+}
+
+.copymorebtn2 {
+  width: 240px;
+  height: 48px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 3rem;
+  color: #4097F4;
+  text-align: center;
+  margin: 18px auto 0;
+  border: 1px solid #4097F4;
+  cursor: pointer;
+}
+
+.tjyj{
+  position: fixed;
+  top: 22%;
+  right: calc(50% - 712px);
+  cursor: pointer;
+}
+
+.tjyj-icon1{
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.tjyj-icon2{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 30px;
+  left: -25px;
+  transition: all 1s;
+}
+
+.tjyj-title{
+  font-size: 1.125rem;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1.875rem;
+  color: #555555;
+}
+
+.tjyj-href{
+  position: absolute;
+  top: -38px;
+  left: -410px;
+  width: 370px;
+  height: 160px;
+  transition: all 1s;
+}
+
+.tjyj-href2{
+  position: absolute;
+  top: -38px;
+  left: -482px;
+  width: 370px;
+  height: 90px;
+  transition: all 1s;
+}
+
+.tjyjboxclose{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+}
+
+
+.tjyjboxclose2{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 12px;
+  height: 12px;
+}
+
+.mtjyjboxclose2{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 12px;
+  height: 12px;
+}
+
+.tjyjimg{
+  cursor: pointer;
+}
+
+.tjyjclose{
+  transform: scale(0,0);
+  transform-origin: center right;
+}
+
+.tjyjclose2{
+  transform: rotate(180deg);
+}
+
+.mtjyjbox{
+  display: none;
+}
+
+@media (max-width:1200px) {
+  .tjyj{
+    right: 10px;
+    transform: scale(0.5);
+  }
+
+  .tjyj-title{
+    font-size: 0.75rem;
+  }
+}
+
+
+@media (max-width:500px) {
+  body {
+    padding-bottom: 150px;
+  }
+
+  .copyok {
+    font-size: 0.875rem;
+  }
+
+  .copyok2 {
+    font-size: 0.875rem;
+  }
+
+  .mphonebox {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    gap: 1px;
+    background: #fff;
+    z-index: 11;
+  }
+
+  .mphone {
+    width: 50%;
+    height: 50px;
+    background: #F5F5F5;
+    font-size: 0.875rem;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    line-height: 1.125rem;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .mphone img {
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
+  }
+
+  .copymorebox {
+    width: 316px;
+  }
+
+  .copymorebtn1 {
+    width: auto;
+  }
+
+  .copymorebtn2 {
+    width: auto;
+  }
+
+  .tjyj{
+    display: none;
+  }
+
+  .mtjyjbox{
+    position: fixed;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: none;
+    z-index: 11;
+  }
+
+  .mtjyjboxclose{
+    position: absolute;
+    top: 0;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .mtjyjimg{
+    width: auto;
+    height: auto;
+    transition: all 1s;
+  }
+
+  .tjyjclose{
+    transform: scale(0,0);
+    transform-origin: center right;
+  }
+
+  .mtjyj-in{
+    display: none;
+    position: absolute;
+    top: 30%;
+    right: 8px;
+  }
+
+  .mtjyj-title{
+    font-size: 0.75rem;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    line-height: 1.125rem;
+    color: #555555;
+    text-align: center;
+  }
+
+  .mtjyjicon2{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width:1200px) {
+  .fxbox {
+    right: calc(50% - 700px);
+    bottom: 20%;
+  }
+
+  .fxbox2 {
+    right: calc(50% - 350px);
+    bottom: 20%;
+  }
+}
+
+@media (min-width:500px) and (max-width: 1200px) {
+  .fxbox {
+    right: 10px;
+    bottom: 20%;
+  }
+
+  .fxbox2 {
+    right: 10px;
+    bottom: 20%;
+  }
+}
+
+@media (max-width:500px) {
+  
+  .mphonebox{
+    background: #F7F7F7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+  }
+  
+  .mphone{
+    padding-top: 4px;
+    display: block;
+    flex: 1;
+    text-align: center;
+    font-size: 0.75rem;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    color: #333333;
+  }
+  
+  .mphone img{
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 4px;
+  }
+  
+  .bot-line{
+    width: 1px;
+    height: 36px;
+    background: rgba(204, 204, 204, 0.50)
+  }
+
+}
+
+
+

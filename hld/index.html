@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>高考大学专业选择测评-高考填志愿选专业测试</title>
+    <meta name="keywords" content="高考大学专业选择测评,职业发展规划,高考填志愿选专业" />
+    <meta name="description"
+        content="高考大学专业选择测评：帮助高考生重新认识自己，更深层次的了解自己的人格特征和优势所在。从而准确选择适合自己的专业，在就业压力逐渐增加的今天，找到适合自己的起点。" />
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/college.css">
+    <link rel="stylesheet" href="./css/change.css">
+    <link rel="stylesheet" href="./css/hometop.css">
+    <script src="/js/nocopy.js"></script> 
+</head>
+
+<body>
+    <div id="home" style="letter-spacing: 1px;">
+        <div ref="zhezhao" class="cursor-pointer z-10 w-full h-full fixed top-0 left-0 hidden"
+            style="background: rgba(0,0,0,0.1);" @click="myclose()" @touchmove.prevent></div>
+
+        <div class="hidden  sm:block  bg-cover bg-center relative">
+            <div class=" hidden sm:block">
+                <div style="background: url('./img/home-bg.jpg'); background-size: 100% 100%;padding: 20.83% 50%;">
+                </div>
+            </div>
+
+            <div class="w-full absolute top-0 left-0">
+
+                <div class="hidden container mx-auto  sm:flex justify-between items-center pt-8 pb-6">
+                    <img src="./img/m-hm-logo.png" alt="logo" class="sm:w-24  xl:w-32">
+
+                    <div class="flex justify-between items-center text-xs sm:text-xs md:text-sm xl:text-lg mypcnav">
+                        <a href="./"
+                           class="text-white xl:mx-4 mr-1 px-2 opacity-80 hover:opacity-100 whitespace-nowrap">霍兰德职业兴趣测评</a>                       
+                        <a href="/mbti/"
+                            class="text-white xl:mx-4 mr-1 px-2 opacity-80 hover:opacity-100 whitespace-nowrap">MBTI高考性格测评</a>                      
+
+                    </div>
+
+                   
+                </div>
+
+
+                <div class="container mx-auto sm:py-1 lg:py-20  xl:py-28">
+                    <div class="sm:w-5 sm:h-2.5 lg:w-10 lg:h-5 bg-white rounded-2xl sm:mb-2  lg:mb-10"></div>
+                    <div class="sm:text-lg lg:text-4xl text-white mb-7">
+                        <h1>霍兰德高考大学专业选择测评</h1>
+                    </div>
+                    <div class="sm:w-1/2 lg:w-2/5 text-white text-sm lg:text-xl lg:leading-loose">
+                        对于高考生而言，选专业特别重要，因为它决定我们人生即将走的“路”。目前我国大学本科专业有十二大门类，分别是理学、工学、农学、医学、文学、历史学、哲学、法学、经济学、管力学、教育学、艺术学，专业合计达七百多个。如此众多的专业，哪一个才是最适合自己的呢？
+                    </div>
+                </div>
+            </div>
+
+            <div class=" w-full absolute bottom-0 left-0" style="background: rgba(0, 19, 124, 0.5900);">
+                <div ref="mfbox" class="container mx-auto " id="tcbox">
+                    <div class="container mx-auto hidden sm:flex text-xs xl:text-lg  xl:pr-0  
+                     text-yellow-300   rounded   items-center py-2 right-0">
+                        <img src="./img/m-hm-laba2.png" alt="" class=" w-7 h-7 ml-3 mr-2 ">
+                        高考大学专业选择测试报告均可免费获取
+                        <div class=" absolute top-1 right-1">
+                            <img src="./img/m-hm-close.png" alt="" class=" w-3 h-3 cursor-pointer"
+                                @click="theclose2()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 移动端导航 -->
+        <div class="sm:hidden flex justify-between items-center bg-skyblue px-3 ">
+            <img src="./img/m-hm-logo.png" alt="" class="w-1/5  p-1">
+            <div class=' flex items-center'>
+               
+
+                <div class="relative ml-5">
+                    <img src="./img/m-hm-nav.png" alt="" @click='iftanchang()'
+                        class="w-22px h-22px sm:w-9 sm:h-9 cursor-pointer">
+                    <div class="w-44  absolute top-6  -right-2 px-3  py-3 z-10  hidden"
+                        style="background: url('./img/m-nav-bg4.png');;background-size: 100% 100%;" id="pcnav"
+                        ref="pcnav">
+                       
+                        <a href="/hld/"
+                            class="text-base sm:text-xl block text-hublue p-2.5  hover:bg-skyblue hover:text-white rounded">霍兰德兴趣测评</a>
+                        <a href="/mbti/"
+                            class="text-base sm:text-xl block text-hublue p-2.5  hover:bg-skyblue hover:text-white rounded">MBTI性格测评</a>
+                      
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+      
+
+        <nav class="sm:hidden mx-3  navboxp2 ">
+
+            <div class="navbox">
+                <a href="/hld/" class="navactive">霍兰德评测</a>
+                <a href="/mbti/" class="ain2">MBTI测评</a>
+
+            </div>
+        </nav>
+
+        <div class="  pb-6 mx-3 sm:border-none pt-5 px-0 text-mblack">
+            <img src="./img/collegeLogo.png" alt="" class="sm:hidden  w-full  mx-auto">
+
+            <div class=" sm:container mx-auto">
+
+                <div class="sm:hidden mt-5 leading-7 text-sm text-555">
+                    <span class="  text-skyblue font-semibold sm:block sm:text-38 sm:mb-8">高考专业兴趣测评介绍：</span>
+                    对于高考生而言，选专业特别重要，因为它决定我们人生即将走的“路”。目前我国大学本科专业有十二大门类，分别是理学、工学、农学、医学、文学、历史学、哲学、法学、经济学、管力学、教育学、艺术学，专业合计达七百多个。如此众多的专业，哪一个才是最适合自己的呢？
+                </div>
+             
+                <div class=" mt-11 sm:mt-24  ">
+                    <p class="text-22  font-semibold sm:text-38 sm:mb-12 mb-4">大家是不是也有过这样的困惑？</p>
+
+                    <p class="text-555 sm:text-666 sm:text-2xl sm:leading-50px leading-7 sm:mb-11 mb-8 ">
+                        在高中阶段选择文科还是理科总是会很纠结，高考填报志愿的时候我们才发现原来本科专业就有771个。所以我们往往无从选择，或者太多选择?或者不知道核心的东西是什么？如果我们总是以未来热门行业为唯一的参考来做决定，那就注定大部分人会误入歧途。
+                    </p>
+
+                    <p class="text-555 sm:text-666 sm:text-2xl sm:leading-50px leading-7 sm:mb-11 mb-8 ">
+                        北京大学心理健康教育咨询中心副主任徐凯文曾做调查“北大一年级的新生，包括本科生和研究生，其中有30.4%的学生厌恶学习，或者认为学习没有意义，请注意这些是高考战场上，千军万马杀出来的大赢家。还有40.4%的学生认为活着人生没有意义，我现在活着只是按照别人的逻辑这样活下去而已，其中最极端的就是放弃自己。
+                    </p>
+
+                    <p class="text-lg  font-semibold sm:text-3xl  sm:mb-12 mb-4">比如下面这位周浩的故事：</p>
+
+                    <div class=" sm:flex items-center">
+                        <img src="./img/clg-img.png" alt="" class=" w-72 sm:mr-14">
+                        <div>
+                            <p class=" text-skyblue sm:text-3xl font-semibold text-lg sm:mb-4 mb-3 sm:mt-4 mt-8">
+                                “弃北大读技校”的周浩</p>
+                            <p class=" flex items-center sm:text-xl text-linegreen mb-3"><img
+                                    src="./img/clg-icon.png" alt="" class=" w-2 mr-3">2008年高考660分，青海省前五名；</p>
+                            <p class=" flex items-center sm:text-xl text-linegreen mb-3"><img
+                                    src="./img/clg-icon.png" alt="" class=" w-2 mr-3">被北京大学生命科学学院录取；</p>
+                            <p class=" flex items-center sm:text-xl text-linegreen mb-3"><img
+                                    src="./img/clg-icon.png" alt="" class=" w-2 mr-3">2009年休学到深圳打工；</p>
+                            <p class=" flex items-center sm:text-xl text-linegreen mb-3"><img
+                                    src="./img/clg-icon.png" alt="" class=" w-2 mr-3">2010年回北大继续学习；</p>
+                            <p class=" flex items-center sm:text-xl text-linegreen mb-3" style="letter-spacing: 0px;">
+                                <img src="./img/clg-icon.png" alt="" class=" w-2 mr-3">2011年从北大退学进入北京工业技师学院
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text-555 sm:text-666 sm:text-2xl sm:leading-50px leading-7 sm:mb-11 mb-8 sm:mt-16 mt-7">
+                        不仅仅是北大，其实每年高考都有很多这样的例子，家长和老师很容易凭借自己的人生经历和对社会、对职业的认知来影响考生的判断，那么作为学生，对于高考所要选择的专业是不是真的很了解呢？有多少人对自己的未来做过规划呢？再来看一些调查数据：
+                    </p>
+
+                    <p class="text-lg  font-semibold sm:text-2xl  sm:mb-12 mb-7">
+                        教育部教育发展研究中心所做的一项针对高三学生的调研显示，高考生对所选专业与学校的了解程度：</p>
+
+                    <div class="sm:flex  sm:justify-center sm:mb-14 mb-7">
+                        <img src="./img/clg-img3.png" alt="" class=" sm:w-1/2 w-full">
+                        <div class="sm:ml-20 sm:mt-10 mt-5">
+                            <p class=" sm:text-2xl text-lg font-semibold"><b
+                                    class="text-linegreen sm:text-3xl text-22">42.1%</b> 的大学生对所学专业不满意</p>
+                            <p class="sm:text-2xl font-semibold sm:my-9 my-3 text-linegreen text-lg">如果可以重新选择</p>
+                            <p class=" sm:text-2xl text-lg font-semibold"><b
+                                    class="text-linegreen sm:text-3xl text-22">65.5%</b> 的大学生表示将选择别的专业</p>
+                        </div>
+                    </div>
+
+                    <p class="text-555 sm:text-666 sm:text-2xl sm:leading-50px leading-7 sm:mb-8 mb-5 ">
+                        从上图可以清楚的看到：许多学生对自己未来的发展方向不明确，存在着“学习无动力、升学无厚望、生涯无规划、发展无方向”的现象。这就导致很多大学生毕业之后即使专业对口，也不喜欢自己所从事的工作。
+                    </p>
+
+                    <p class="text-555 sm:text-666 sm:text-2xl sm:leading-50px leading-7 sm:mb-11 mb-2 ">
+                        所以选专业如同找对象，一定要从心出发，找到符合自己人格特征和兴趣特长的专业。避免学生所学非所长，所学非所爱，误其一生。
+                        然而你真的了解自己吗？世界管理学大师彼得德鲁克说：大部分人不知道他们的优势何在。如果你问他们，他们就会呆呆地看着你，或文不对题地大谈自己的具体知识。很多人甚至就业多年，仍然干着自己既不喜欢也不擅长的工作，非常悲哀。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="mx-3 sm:container sm:mx-auto sm:mt-10 mt-11">
+
+            <p class="text-22  font-semibold sm:text-38 sm:mb-12 mb-4 sm:leading-50px leading-7">
+                那么如何发现自己潜在的优势，如何明确自己具备怎样的人格特征？</p>
+
+            <p class="text-555 sm:text-666 sm:text-2xl sm:leading-50px leading-7 sm:mb-11 mb-5 ">
+                我们团队有着多年对人才甄别测评以及在人力资源大数据建设方面的经验，现筛选出两种专业选择工具，帮助高考生重新认识自己，更深层次的了解自己的人格特征和优势所在。从而准确选择适合自己的专业，在就业压力逐渐增加的今天，找到适合自己的起点。
+            </p>
+
+            <p class="text-555 sm:text-666 sm:text-2xl sm:leading-50px leading-7 sm:mb-11 mb-5 ">
+                这两种测评工具会给出你的人格类型，性格特征及优势，适合的职业（对应相关专业）及发展建议；对大学专业方向选择有非常大的启发和指导作用。
+            </p>
+
+            <div class="flex sm:justify-between justify-evenly  lg:w-4/5 mx-auto">
+                <a href="/mbti/" class="clg-botbox">
+                    <p>MBTI职业性格测评</p>
+                    <div class="btn">点击进入</div>
+                </a>
+
+                <a href="./hldcs.html" class="clg-botbox">
+                    <p>霍兰德职业兴趣测评</p>
+                    <div class="btn">点击进入</div>
+                </a>
+            </div>
+
+            <div class="text-sm sm:mt-28 mt-20 text-999 sm:text-lg text-center">
+                ©2023-2026 石立方高考志愿版权所有 <span class=" hidden sm:inline">（图文代码及试题禁止复制转载）</span>
+            </div>
+            <div class="text-sm sm:text-base mt-2 text-center text-999 pb-10">
+                <a href="/yhxx.html" class=" text-999 font-semibold">使用前必读 </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/js/vue.min.js"></script>
+    <!-- <script src="./js/hometop.js"></script> -->
+
+    <script>
+        new Vue({
+            el: '#home',
+            data() {
+                return {
+
+                    agreen: 'no',
+                    local: {
+                        get: function (key) {
+                            var val = window.localStorage.getItem(key);
+                            if (val == null) {
+                                return false;
+                            }
+                            return JSON.parse(val);
+                        },
+                        set: function (key, val) {
+                            window.localStorage.setItem(key, JSON.stringify(val));
+                            return true;
+                        },
+                        del: function (key) {
+                            window.localStorage.removeItem(key);
+                            return true;
+                        }
+                    },
+                }
+            },
+            methods: {
+                iftanchang() {
+                    this.$refs.pcnav.style.display = 'block'
+                    this.$refs.zhezhao.style.display = 'block'
+
+                },
+                myclose() {
+                    this.$refs.zhezhao.style.display = 'none'
+                    this.$refs.pcnav.style.display = 'none'
+                },
+
+                mfclose() {
+                    this.$refs.mf.style.display = 'none'
+                }
+            },
+        })
+
+        function theclose2() {
+            document.querySelector('#tcbox').style.display = 'none'
+        }    
+    </script>
+</body>
+
+</html>
